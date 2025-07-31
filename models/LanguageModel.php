@@ -11,8 +11,6 @@ declare(strict_types=1);
  */
 
 // File: models/LanguageModel.php
-// This file is part of the Kidney Tales project, a multilingual web application for kidney health stories and resources.
-
 
 class LanguageModel
 {
