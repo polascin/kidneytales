@@ -13,6 +13,6 @@ declare(strict_types=1);
  * 
  */
 
-// Include LanguageModel class
-require_once APP_ROOT . DS . 'models' . DS . 'LanguageModel.php';
+require_once APP_ROOT . DS . 'config' . DS . 'setconstants.php';
 
+require_once APP_ROOT . DS . 'vendor' . DS . 'autoload.php'; // Composer autoload

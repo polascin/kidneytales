@@ -1,0 +1,13 @@
+{
+  "require": {
+    "php": "^8.4",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "filp/whoops": "^2.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "KidneyTales\\": "src/"
+    }
+  }
+}

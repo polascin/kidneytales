@@ -1,0 +1,266 @@
+/* basic.css - Main stylesheet for Kidney Tales 
+  *
+  * @file /public/assets/css/basic.css
+  *
+  * @project Kidney Tales
+  *
+  * @repository kidneytales
+  * @repositoryUrl https://github.com/polascin/kidneytales
+  *
+  * @package KidneyTales
+  * @packageUrl https://github.com/polascin/kidneytales
+  * @packageVersion 2025.08.01.01
+  * @packageDate 2025-07-31
+  *
+  * @version 2025.08.01.01
+  * @date 2025-07-31
+  * @author Ľubomír Polaščín
+  * @license MIT
+  *
+  * @description This stylesheet provides a basic layout and design for the Kidney Tales application.
+  * This file contains a CSS reset, a pastel color palette, and basic styles for typography, links, buttons, and form elements.
+  * It is designed to provide a clean and consistent look across the application.
+  * The styles are responsive and should work well on various devices.
+  * The color palette is inspired by pastel colors to create a soft and inviting user interface.
+*/
+
+/* --- CSS Reset (Meyer reset v2.0 + tweaks) --- */
+/* This reset is based on the Meyer reset, with some tweaks for modern browsers */
+/* It removes default browser styles to ensure a consistent look across different browsers */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+  clear: both;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* --- Pastel Color Palette --- */
+:root {
+  --color-bg: #f8fafc;
+  --color-bg-alt: #f0f4f8;
+  --color-text: #2d3748;
+  --color-primary: lightseagreen; /* Changed to a more pastel shade */
+  --color-secondary: #f7cac9;
+  --color-accent: #ffe5b4;
+  --color-success: #b7e4c7;
+  --color-warning: #fff3cd;
+  --color-danger: #f8d7da;
+  --color-info: #b5ead7;
+  --color-link: #5b9bd5;
+  --color-link-hover: #2b6cb0;
+  --color-border: #e2e8f0;
+
+  /* --- Font Families --- */
+  --main-font: 'Roboto', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  --heading-font: 'Segoe UI', 'Arial', sans-serif;
+  --mono-font: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+  --system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --emoji-font: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'EmojiOne Color', 'Twemoji Mozilla', 'Open Sans Emoji', 'Symbola', sans-serif;
+  --fantasy-font: 'Comic Sans MS', 'Comic Neue', cursive;
+  --cursive-font: 'Brush Script MT', 'Lucida Handwriting', cursive;
+  --sans-serif-font: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;  
+  --serif-font: 'Georgia', 'Times New Roman', serif;
+  --display-font: 'Oswald', 'Montserrat', sans-serif;
+}
+
+/* --- Basic Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px; /* Base font size */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  color-scheme: light dark; /* Support for light and dark modes */
+  font-family: var(--system-font);
+  background-color: var(--color-bg-alt);
+}
+body {
+  background: var(--color-bg);
+  max-width: fit-content;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem;
+  font-family: var(--main-font);
+  border: thin solid var(--color-border);
+  color: var(--color-text);
+  text-align: center;
+}
+p {
+  font-family: var(--main-font);
+  font-size: 1em;
+  color: var(--color-text);
+  text-align: justify; /* Justify text for better readability */
+  text-justify: inter-word; /* Better justification for long words */
+  font-weight: 400;
+  letter-spacing: 0.02em; /* Slightly increased letter spacing for readability */
+  font-size: 1.1em; /* Slightly larger font size for better readability */
+  line-height: 1.8; /* Increased line height for better readability */
+  margin-bottom: 1em; /* Space between paragraphs */
+  padding: 0 1em; /* Padding for better readability on smaller screens */
+  max-width: 800px; /* Limit width for better readability */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  hyphens: auto; /* Enable hyphenation for better text flow */
+  text-indent: 1em; /* Indent the first line of each paragraph */
+  background-color: var(--color-bg-alt); /* Light background for paragraphs */
+  border-radius: 8px; /* Rounded corners for paragraphs */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+  /* Hover effect for paragraphs */
+  &:hover {
+    background-color: var(--color-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  /* Focus effect for accessibility */
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  /* Responsive design */
+  @media (max-width: 600px) {
+    font-size: 1em; /* Adjust font size for smaller screens */
+    padding: 0 0.5em; /* Reduce padding for smaller screens */
+    line-height: 1.6; /* Adjust line height for smaller screens */
+  }
+  /* Accessibility features */
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 1em 0;
+  padding: 0.5em;
+  background-color: var(--color-bg-alt);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Hover effect for headings */
+  &:hover {
+    background-color: var(--color-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  /* Focus effect for accessibility */
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  /* Responsive design */
+  @media (max-width: 600px) {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    padding: 0.3em; /* Reduce padding for smaller screens */
+  }
+  /* Accessibility features */
+  &:focus { 
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+h1 {
+  font-size: 2em;
+  margin-top: 0.5em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4, h5, h6 {
+  font-size: 1.25em;
+}
+code, pre {
+  font-family: var(--mono-font);
+  font-size: 1em;
+  background: var(--color-bg-alt);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: var(--color-link-hover);
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+input, textarea, select, button {
+  font-family: var(--main-font);
+  font-size: 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.5em;
+  background: #fff;
+  color: var(--color-text);
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus, button:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+button {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+button:hover, button:focus {
+  background: var(--color-link-hover);
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}

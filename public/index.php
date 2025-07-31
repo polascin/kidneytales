@@ -56,33 +56,25 @@ function isValidCsrfToken(): bool {
 define('APP_ROOT', dirname(__DIR__));
 define('DS', DIRECTORY_SEPARATOR);
 
-include_once APP_ROOT . DS . 'config' . DS . 'setconstants.php';
 include_once APP_ROOT . DS . 'bootstrap.php';
 
 
+
+
 // --- Language Loading and Error Handling ---
+require_once APP_ROOT . DS . 'vendor' . DS . 'autoload.php';
+use KidneyTales\Models\LanguageModel;
 try {
-    // Ensure LanguageModel is loaded
-    include_once APP_ROOT . DS . 'models' . DS . 'LanguageModel.php';
-    if (!class_exists('LanguageModel')) {
-        throw new Exception('LanguageModel class not found.');
-    }
-    $languageModel = new LanguageModel();
-    $languageModel->loadLanguageTranslation();
-    // Set the current language code for the template
-    $currentLanguageCode = $languageModel->detectCurrentLanguage();
-    // Get translations array for use in template
-    $t = $languageModel::$t;
-    // Optionally, expose language model for advanced template use
-    // $GLOBALS['languageModel'] = $languageModel;
+    $currentLanguageCode = LanguageModel::detectCurrentLanguage();
+    LanguageModel::loadLanguageTranslations($currentLanguageCode);
+    LanguageModel::setCurrentLanguage($currentLanguageCode);
 } catch (Throwable $e) {
     error_log('[index.php] Language loading error: ' . $e->getMessage());
-    // Fallback: use English only
     $currentLanguageCode = 'en';
     $t = [];
 }
 // --- End Language Loading ---
 
-include_once APP_ROOT . DS . 'views' . DS . 'homePageView.php';
+include_once APP_ROOT . DS . 'src' . DS . 'Views' . DS . 'HomePageView.php';
 
 ?>
