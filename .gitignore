@@ -1,0 +1,140 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+
+# Composer
+/vendor/
+composer.lock
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# PHPStorm
+.idea/
+
+# VSCode
+.vscode/
+
+# OS generated
+ehthumbs.db
+Icon?
+
+# Environment
+.env
+.env.*
+
+# Cache
+.cache/
+*.cache
+
+# PHPUnit
+.phpunit.result.cache
+
+# Coverage
+coverage/
+
+# Build
+/build/
+/dist/
+
+# User uploads
+/public/uploads/
+/storage/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.sql.gz
+
+# Backup files
+*.bak
+*.backup
+
+# Misc
+*.seed
+*.pid
+*.seed.js
+*.seed.json
+
+# Ignore local config
+config/local.php
+
+# Ignore by extension
+*.tgz
+*.gz
+*.zip
+*.tar
+*.rar
+*.7z
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+*.app
+*.iml
+
+# Ignore test output
+/test-output/
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore temporary files
+/tmp/
+
+# Ignore session files
+/sessions/
+
+# Ignore logs
+/logs/
+
+# Ignore cache
+/cache/
+
+# Ignore compiled files
+*.class
+*.pyc
+*.pyo
+*.pyd
+*.o
+*.obj
+*.dll
+*.exe
+*.out
+*.app
+*.iws
+*.ipr
+*.iml
+
+# Ignore other IDE files
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Ignore local environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore coverage and test result files
+coverage/
+*.lcov
+*.lcov.info
+
+# Ignore custom
+custom/

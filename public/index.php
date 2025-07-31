@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-// File: /public/index.php
-
 /**
- * Kidney Tales - mulilingual web application entry point
- *  
+ * Kidney Tales - multilingual web application entry point
+ *
  * @author Ľubomír Polaščín
  * @package KidneyTales
- * @version 2005.08.1.0
- * 
+ * @version 2025.08.1.1
  */
+
+// File: /public/index.php
 
 // --- Secure Session and CSRF Setup ---
 // Set a custom session name for extra security

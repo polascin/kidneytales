@@ -1,10 +1,19 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * LanguageModel for Kidney Tales - multilingual web application
  *
- * @version 2005.08.1.0
+ * @package KidneyTales
+ * @author Ľubomír Polaščín
+ * @version 2025.08.1.1
  */
+
+// File: models/LanguageModel.php
+// This file is part of the Kidney Tales project, a multilingual web application for kidney health stories and resources.
+
+
 class LanguageModel
 {
     /**

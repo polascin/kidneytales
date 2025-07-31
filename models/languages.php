@@ -1,5 +1,17 @@
 <?php
-// languages.php - Language metadata for Kidney Tales
+
+declare(strict_types=1);
+
+/**
+ * Language metadata for Kidney Tales
+ * 
+ * @author Ľubomír Polaščín
+ * @package KidneyTales
+ * @version 2025.08.1.1
+ */
+
+// File: /models/languages.php
+
 // code => [English name, Native name, Country code]
 return [
 
