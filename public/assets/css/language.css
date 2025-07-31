@@ -1,10 +1,13 @@
 .language-selector-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-flow: row nowrap;
   justify-self: right;
-  justify-items: flex-end;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 100
+  align-items: center;
+}
+.language-selector-container select {
+  font-family: var(--display-font);
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+}

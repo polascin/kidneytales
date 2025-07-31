@@ -56,13 +56,9 @@ function isValidCsrfToken(): bool {
 define('APP_ROOT', dirname(__DIR__));
 define('DS', DIRECTORY_SEPARATOR);
 
-include_once APP_ROOT . DS . 'bootstrap.php';
-
-
-
+require_once APP_ROOT . DS . 'bootstrap.php';
 
 // --- Language Loading and Error Handling ---
-require_once APP_ROOT . DS . 'vendor' . DS . 'autoload.php';
 use KidneyTales\Models\LanguageModel;
 try {
     $currentLanguageCode = LanguageModel::detectCurrentLanguage();

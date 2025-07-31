@@ -86,24 +86,23 @@ $currentLanguageCode = LanguageModel::detectCurrentLanguage();
 
   <body>
     <div class="language-selector-container">
-      <form method="post" action="/set-language">
-        <label for="language-selector">Select Language:</label>
-        <select id="language-selector" name="language_code" onchange="this.form.submit()">
+      <form method="post" action="" onsubmit="location.reload(); return false;">
+        <select id="language-selector" name="lang" onchange="this.form.submit()">
           <?php
           $currentLanguageCode = LanguageModel::detectCurrentLanguage();
           $supportedLanguages = LanguageModel::getSupportedLanguageCodes();
           foreach ($supportedLanguages as $langCode):
             $languageCode = htmlspecialchars(trim(strtolower($langCode)));
-            $languageName = htmlspecialchars(trim(self::getLanguageEnglishName($langCode)));
-            $languageNative = htmlspecialchars(trim(self::getLanguageNativeName($langCode)));
-            $flag = self::getFlagPath($langCode);
+            $language = htmlspecialchars(trim(LanguageModel::getLanguage($langCode)));
+            $languageName = htmlspecialchars(trim(LanguageModel::getLanguageEnglishName($langCode)));
+            $languageNative = htmlspecialchars(trim(LanguageModel::getLanguageNativeName($langCode)));
+            $flag = LanguageModel::getFlagPath($langCode);
             ?>
-          <option value="<?=$langCode?>" <?=$currentLanguageCode === $langCode ? 'selected' : '' ?>>
-            <img class="language-selector-img" src="<?=$flag?>" alt="<?=$languageNative.' ('.$languageName.') '?>"><?=$languageCode?> - <?=$languageName?> (<?=$languageNative?>)
-          </option>
+          <option value="<?=$langCode?>" <?=$currentLanguageCode === $langCode ? 'selected' : '' ?>><img class="language-selector-img" src="<?=$flag?>" alt="<?=$languageNative.' ('.$languageName.')'?>"><?=$languageNative?> (<?=$languageName?>) [<?=$languageCode?>]</option>
           <?php
           endforeach;
-        ?>
+          echo PHP_EOL;
+          ?>
         </select>
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
       </form>

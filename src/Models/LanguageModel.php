@@ -176,8 +176,8 @@ class LanguageModel
     $languagesFile = APP_ROOT . DS . 'src' . DS . 'Models' . DS . 'languages.php';
     if (file_exists($languagesFile)) {
       $data = include $languagesFile;
-      if (is_array($data) && isset($data[$lang]['name'])) {
-        return htmlspecialchars(trim($data[$lang]['name']));
+      if (is_array($data) && isset($data[$lang][0])) {
+        return htmlspecialchars(trim($data[$lang][0]));
       }
     }
     return null;
@@ -193,8 +193,25 @@ class LanguageModel
     $languagesFile = APP_ROOT . DS . 'src' . DS . 'Models' . DS . 'languages.php';
     if (file_exists($languagesFile)) {
       $data = include $languagesFile;
-      if (is_array($data) && isset($data[$lang]['native'])) {
-        return htmlspecialchars(trim($data[$lang]['native']));
+      if (is_array($data) && isset($data[$lang][1])) {
+        return htmlspecialchars(trim($data[$lang][1]));
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Get simple language code languages.php
+   * @param string $lang Language code (e.g., 'en', 'sk')
+   * @return string|null Simple language code if found, null otherwise
+   */
+  public static function getLanguage(string $lang): ?string
+  {
+    $languagesFile = APP_ROOT . DS . 'src' . DS . 'Models' . DS . 'languages.php';
+    if (file_exists($languagesFile)) {
+      $data = include $languagesFile;
+      if (is_array($data) && isset($data[$lang][2])) {
+        return htmlspecialchars(trim($data[$lang][2]));
       }
     }
     return null;
