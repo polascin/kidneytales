@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace KidneyTales\Models;
 
 /**
- * LanguageModel for Kidney Tales - multilingual web application
+ * LanguageModel for Kidney Tales - multilingual web application.
+ *
+ * Handles language detection, translation loading, and language metadata.
  *
  * @package KidneyTales
  * @author Ľubomír Polaščín
@@ -16,32 +18,35 @@ namespace KidneyTales\Models;
 
 class LanguageModel
 {
-
   /**
-   * @var array<string, string> Holds merged translations for the current language
+   * Holds merged translations for the current language.
+   * @var array<string, string>
    */
   public static $t = [];
 
   /**
-   * @var string Path to the directory containing language files
+   * Path to the directory containing language files.
+   * @var string
    */
   public static $languageFilesPath = LANGUAGES_PATH;
 
   /**
-   * @var string File extension for language files
+   * File extension for language files.
+   * @var string
    */
   public static $languageFileExtension = '.php';
 
   /**
-   * @var string Default language code (e.g., 'en')
+   * Default language code (e.g., 'en').
+   * @var string
    */
   public static $defaultLanguage = DEFAULT_LANGUAGE;
 
   /**
-   * @var string|null Current language code in use
+   * Current language code in use.
+   * @var string|null
    */
   public static $currentLanguageCode;
-
 
   /**
    * Get all supported language codes from the languages.php file.
@@ -87,92 +92,9 @@ class LanguageModel
   }
 
   /**
-   * Detect the current language code using URL, POST, session, cookie, browser, or geo headers.
-   * @return string The detected language code
-   */
-  public static function detectCurrentLanguage(): string
-  {
-    // Ensure session is started before accessing $_SESSION
-    if (session_status() !== PHP_SESSION_ACTIVE) {
-      session_start();
-    }
-
-    $sanitize = function ($code) {
-      $code = strtolower(trim($code));
-      return preg_match('/^[a-z0-9_-]+$/i', $code) ? $code : '';
-    };
-
-    // 1. URL param (?lang=)
-    if (isset($_GET['lang'])) {
-      $candidate = $sanitize($_GET['lang']);
-      if (self::isSupported($candidate)) {
-        self::$currentLanguageCode = $candidate;
-        return self::$currentLanguageCode;
-      }
-    }
-    // 2. POST param
-    elseif (
-      isset($_POST['lang'])
-      && isset($_POST['csrf_token'], $_SESSION['csrf_token'], $_SESSION['csrf_token_time'])
-      && hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
-      && (time() - $_SESSION['csrf_token_time'] <= 3600)
-    ) {
-      $candidate = $sanitize($_POST['lang']);
-      if (self::isSupported($candidate)) {
-        self::$currentLanguageCode = $candidate;
-        return self::$currentLanguageCode;
-      }
-    }
-    // 3. Session
-    elseif (isset($_SESSION['lang'])) {
-      $candidate = $sanitize($_SESSION['lang']);
-      if (self::isSupported($candidate)) {
-        self::$currentLanguageCode = $candidate;
-        return self::$currentLanguageCode;
-      }
-    }
-    // 4. Cookie
-    elseif (isset($_COOKIE['lang'])) {
-      $candidate = $sanitize($_COOKIE['lang']);
-      if (self::isSupported($candidate)) {
-        self::$currentLanguageCode = $candidate;
-        return self::$currentLanguageCode;
-      }
-    }
-    // 5. Browser Accept-Language
-    elseif (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-      $acceptLangs = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-      foreach ($acceptLangs as $lang) {
-        $langCode = $sanitize(substr($lang, 0, 5));
-        if (self::isSupported($langCode)) {
-          self::$currentLanguageCode = $langCode;
-          return self::$currentLanguageCode;
-        }
-        // Try primary subtag only (e.g., 'en' from 'en-US')
-        $primary = $sanitize(substr($langCode, 0, 2));
-        if (self::isSupported($primary)) {
-          self::$currentLanguageCode = $primary;
-          return self::$currentLanguageCode;
-        }
-      }
-    }
-    // 6. Geo language code (custom header or env)
-    elseif (isset($_SERVER['HTTP_GEO_LANG']) || isset($_SERVER['GEO_LANG'])) {
-      $geoLang = $_SERVER['HTTP_GEO_LANG'] ?? $_SERVER['GEO_LANG'] ?? null;
-      $candidate = $sanitize($geoLang);
-      if ($candidate && self::isSupported($candidate)) {
-        self::$currentLanguageCode = $candidate;
-        return self::$currentLanguageCode;
-      }
-    }
-    // 7. Fallback to default
-    self::$currentLanguageCode = $sanitize(self::$defaultLanguage);
-    return self::$currentLanguageCode;
-  }
-
-  /**
-   * Check if a language code is supported
+   * Check if a language code is supported.
    * @param string $lang Language code to check
+   * @return bool True if supported, false otherwise
    */
   public static function isSupported(string $lang): bool
   {
@@ -181,7 +103,7 @@ class LanguageModel
   }
 
   /**
-   * Get the English name for a given language code from languages.php
+   * Get the English name for a given language code from languages.php.
    * @param string $lang Language code (e.g., 'en', 'sk')
    * @return string|null English name if found, null otherwise
    */
@@ -198,7 +120,7 @@ class LanguageModel
   }
 
   /**
-   * Get the native name for a given language code from languages.php
+   * Get the native name for a given language code from languages.php.
    * @param string $lang Language code (e.g., 'en', 'sk')
    * @return string|null Native name if found, null otherwise
    */
@@ -215,9 +137,10 @@ class LanguageModel
   }
 
   /**
-   * Get the path to the flag image for a given language code, using the country name and .webp extension.
+   * Get the path to the flag image for a given language code, using the country code and .webp extension.
+   * If the flag is missing, falls back to the "un" (United Nations) flag.
    * @param string $lang Language code (e.g., 'en', 'sk')
-   * @return string|null Path to the flag image if country is found, null otherwise
+   * @return string Path to the flag image, or fallback if not found
    */
   public static function getFlagPath(string $lang): ?string
   {
@@ -227,17 +150,20 @@ class LanguageModel
     if (file_exists($countriesFile)) {
       $data = include $countriesFile;
       if (is_array($data) && isset($data[$lang])) {
+        // Use country code from countries.php
         $country = strtolower(trim($data[$lang][1]));
         $flag = APP_ROOT . DS . 'resources' . DS . 'flags' . DS . $country . '.webp';
-        if (!$flag) {
+        if (!file_exists($flag)) {
+          // Fallback: try country code from languages.php
           if (file_exists($languagesFile)) {
             $data = include $languagesFile;
             if (is_array($data) && isset($data[$lang][2])) {
               $country = strtolower(trim($data[$lang][2]));
               $flag = APP_ROOT . DS . 'resources' . DS . 'flags' . DS . $country . '.webp';
-              if ($flag) {
+              if (file_exists($flag)) {
                 return $flag;
               } else {
+                // Fallback to UN flag if not found
                 return $unFlag;
               }
             } else {

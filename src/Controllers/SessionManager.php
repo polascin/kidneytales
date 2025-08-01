@@ -19,19 +19,17 @@ class SessionManager
    *
    * @return void
    */
-  public function StartSession(): void
+  public static function StartSession(): void
   {
-    // Set a custom session name for the application
-    session_name('KIDNEYTALESSESSID');
-    // Enforce strict session cookie and session settings
-    ini_set('session.use_strict_mode', '1');
-    ini_set('session.cookie_httponly', '1');
-    ini_set('session.cookie_secure', isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? '1' : '0');
-    ini_set('session.cookie_samesite', 'Lax');
-    // Optionally, set session.cookie_lifetime and session.gc_maxlifetime for custom session duration
-    $isNewSession = false;
-    // Start a secure session if none is started
+    // Only set session parameters if session is not active
     if (session_status() === PHP_SESSION_NONE) {
+      session_name('KIDNEYTALESSESSID');
+      ini_set('session.use_strict_mode', '1');
+      ini_set('session.cookie_httponly', '1');
+      ini_set('session.cookie_secure', isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? '1' : '0');
+      ini_set('session.cookie_samesite', 'Lax');
+      // Optionally, set session.cookie_lifetime and session.gc_maxlifetime for custom session duration
+
       $secure = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on';
       session_set_cookie_params([
         'lifetime' => 0, // Session cookie (until browser closes)
@@ -44,10 +42,11 @@ class SessionManager
       session_start();
       $isNewSession = true;
     } else {
-      session_start();
+      // Session already active, do not change parameters, just continue
+      $isNewSession = false;
     }
     // Regenerate session ID only if this is a new session (prevents fixation)
-    if ($isNewSession) {
+    if (isset($isNewSession) && $isNewSession) {
       session_regenerate_id(true);
     }
     // Bind session to user agent and IP address to prevent hijacking
@@ -95,7 +94,7 @@ class SessionManager
    *
    * @return bool True if CSRF token is valid, false otherwise.
    */
-  public function isValidCsrfToken(): bool
+  public static function isValidCsrfToken(): bool
   {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $valid = isset($_POST['csrf_token'], $_SESSION['csrf_token'], $_SESSION['csrf_token_time'])

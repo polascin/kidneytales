@@ -2,17 +2,26 @@
 
 declare(strict_types=1);
 
-// File: /bootstrap.php
-
 /**
- * Bootstrap for Kidney Tales - multilingual web application entry point
- * 
+ * Bootstrap for Kidney Tales - multilingual web application
+ *
+ * Loads configuration constants and Composer autoloader.
+ *
  * @author Ľubomír Polaščín
  * @package KidneyTales
- * @version 2005.08.1.0
- * 
+ * @version 2025.08.1.1
  */
 
+// Define application root and directory separator if not already defined
+if (!defined('APP_ROOT')) {
+    define('APP_ROOT', dirname(__DIR__));
+}
+if (!defined('DS')) {
+    define('DS', DIRECTORY_SEPARATOR);
+}
+
+// Load configuration constants
 require_once APP_ROOT . DS . 'config' . DS . 'setconstants.php';
 
-require_once APP_ROOT . DS . 'vendor' . DS . 'autoload.php'; // Composer autoload
+// Load Composer autoloader (PSR-4 autoloading)
+require_once APP_ROOT . DS . 'vendor' . DS . 'autoload.php';
