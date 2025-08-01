@@ -93,7 +93,6 @@ $currentLanguageCode = LanguageModel::detectCurrentLanguage();
           $supportedLanguages = LanguageModel::getSupportedLanguageCodes();
           foreach ($supportedLanguages as $langCode):
             $languageCode = htmlspecialchars(trim(strtolower($langCode)));
-            $language = htmlspecialchars(trim(LanguageModel::getLanguage($langCode)));
             $languageName = htmlspecialchars(trim(LanguageModel::getLanguageEnglishName($langCode)));
             $languageNative = htmlspecialchars(trim(LanguageModel::getLanguageNativeName($langCode)));
             $flag = LanguageModel::getFlagPath($langCode);

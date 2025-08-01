@@ -1,0 +1,41 @@
+aln (Gheg Albanian) → al
+an (Aragonese) → es-ar
+ast (Asturian) → es-as
+br (Breton) → fr-bre
+ca (Catalan) → es-ct
+co (Corsican) → fr-cors
+dsb (Lower Sorbian) → de-bb
+eo (Esperanto) → eo
+es-ar (Spanish (Argentina)) → ar
+es-as (Spanish (Asturias)) → es-as
+es-ct (Spanish (Catalonia)) → es-ct
+es-ga (Spanish (Galicia)) → es-ga
+es-pv (Spanish (Basque Country)) → es-pv
+fi (Finnish) → fi
+fr-bre (French (Brittany)) → fr-bre
+fr-cors (French (Corsica)) → fr-cors
+fr-oc (French (Occitania)) → fr-oc
+fy (Frisian) → nl-fy
+fur (Friulian) → it-fri
+gb-cnw (Cornish) → gb-cnw
+gv (Manx) → im
+hsb (Upper Sorbian) → de-sx
+it-fri (Friulian) → it-fri
+it-si (Sicilian) → it-si
+it-sr (Sardinian) → it-sr
+it-ve (Venetian) → it-ve
+kw (Cornish) → gb-cnw
+nds (Low German) → de-nds
+nds-nl (Low Saxon (Netherlands)) → nl-nds
+nl-fy (Frisian) → nl-fy
+nl-nds (Low Saxon (Netherlands)) → nl-nds
+oc (Occitan) → fr-oc
+rm (Romansh) → ch-gr
+rue (Rusyn) → ua
+sc (Sardinian) → it-sr
+sco (Scots) → gb-sct
+sli (Silesian (Germany)) → de-sls
+szl (Silesian) → pl
+vec (Venetian) → it-ve
+vls (West Flemish) → be-fl
+wa (Walloon) → be-wa
