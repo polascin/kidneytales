@@ -397,4 +397,11 @@ return [
     'day_saturday' => 'Sabato',
     'day_sunday' => 'Dimanĉo',
     'footer_copyright' => 'Ľubomír Polaščín',
+
+    // ===============================
+    // 16. MISCELLANEOUS
+    // ===============================
+    'current_language_code' => 'eo',
+    'welcome_message' => 'Bonvenon al Renaj Rakontoj',
+    'app_name' => 'Renaj Rakontoj',
 ];

@@ -430,4 +430,36 @@ return [
     'year' => 'Rok',
     'week' => 'Týden',
     'today_is' => 'Dnes je',
+
+    // --- BEGIN: Missing Czech translations for Kidney Tales ---
+
+    'current_language_code' => 'cs',
+    'welcome_message' => 'Vítejte v Ledvinových příbězích',
+    'app_name' => 'Ledvinové příběhy',
+
+    // If you use navigation keys like in en.php:
+    'nav_home' => 'Domů',
+    'nav_stories' => 'Příběhy',
+    'nav_categories' => 'Kategorie',
+    'nav_about' => 'O nás',
+    'nav_contact' => 'Kontakt',
+    'nav_profile' => 'Profil',
+    'nav_settings' => 'Nastavení',
+    'nav_logout' => 'Odhlásit se',
+    'nav_login' => 'Přihlásit se',
+    'nav_register' => 'Registrovat se',
+    'nav_dashboard' => 'Nástěnka',
+    'nav_admin' => 'Administrátor',
+    'nav_search' => 'Hledat',
+    'nav_help' => 'Nápověda',
+    'nav_faq' => 'Často kladené dotazy',
+    'menu_toggle' => 'Přepnout menu',
+    'breadcrumb_home' => 'Domů',
+    'breadcrumb_separator' => '/',
+
+    // Authentication (if missing)
+    'auth_login' => 'Přihlásit se',
+    'auth_register' => 'Registrovat se',
+
+    // --- END: Missing Czech translations ---
 ];

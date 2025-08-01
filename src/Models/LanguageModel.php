@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace KidneyTales\Models;
 
+use KidneyTales\Controllers\LanguageController;
+
 /**
  * LanguageModel for Kidney Tales - multilingual web application.
  *
@@ -181,5 +183,10 @@ class LanguageModel
     } else {
       return $unFlag;
     }
+  }
+
+  public static function getCurrentLanguageCode() : string
+  {
+    return self::$currentLanguageCode = LanguageController::detectCurrentLanguage();
   }
 }

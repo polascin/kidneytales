@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+namespace KidneyTales\Views;
+
 use KidneyTales\Models\LanguageModel;
+use KidneyTales\Controllers\LanguageController;
 
 // File: /views/homePageView.php
 
@@ -15,7 +18,8 @@ use KidneyTales\Models\LanguageModel;
  * 
  */
 
-$currentLanguageCode = LanguageModel::detectCurrentLanguage();
+$currentLanguageCode = LanguageModel::getCurrentLanguageCode();
+$t = LanguageModel::$t;
 
 ?>
 
@@ -85,11 +89,12 @@ $currentLanguageCode = LanguageModel::detectCurrentLanguage();
   </head>
 
   <body>
+    <!-- Language Selector -->
     <div class="language-selector-container">
       <form method="post" action="" onsubmit="location.reload(); return false;">
         <select id="language-selector" name="lang" onchange="this.form.submit()">
           <?php
-          $currentLanguageCode = LanguageModel::detectCurrentLanguage();
+          $currentLanguageCode = LanguageController::detectCurrentLanguage();
           $supportedLanguages = LanguageModel::getSupportedLanguageCodes();
           foreach ($supportedLanguages as $langCode):
             $languageCode = htmlspecialchars(trim(strtolower($langCode)));
