@@ -11,3 +11,43 @@
   font-style: italic;
   text-align: right;
 }
+.flags-selector-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-content: flex-start;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: fit-content;
+}
+.flags-selector {
+  display: flex;
+  flex-flow: column nowrap;
+}
+button.flags-selector {
+  border: thin solid transparent;
+  background-color: transparent;
+  margin: 0.1rem; padding: 0.2rem;
+  color: var(--color-grey);
+  font-size: 0.75rem;
+  font-weight: normal;
+  font-style: normal;
+}
+button.flags-selector:hover {
+  font-weight: bold;
+  border: thin solid var(--color-silver);
+}
+button.flags-selector:focus {
+  font-weight: bold;
+  border: thin solid var(--color-grey);
+  color: var(--color-red);
+}
+.flags-selector img {
+  display: block;
+  width: 2.5rem;
+  height: auto;
+  border: thin solid transparent;
+  margin: 0 auto 0 auto; padding: 0;
+}

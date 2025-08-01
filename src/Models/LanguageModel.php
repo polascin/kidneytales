@@ -146,22 +146,22 @@ class LanguageModel
    */
   public static function getFlagPath(string $lang): ?string
   {
-    $unFlag = APP_ROOT . DS . 'resources' . DS . 'flags' . DS . 'un.webp';
+    $unFlag = 'assets' . DS . 'flags' . DS . 'un.webp';
     $countriesFile = APP_ROOT . DS . 'resources' . DS . 'countries.php';
     $languagesFile = APP_ROOT . DS . 'resources' . DS . 'languages.php';
     if (file_exists($countriesFile)) {
       $data = include $countriesFile;
       if (is_array($data) && isset($data[$lang])) {
         // Use country code from countries.php
-        $country = strtolower(trim($data[$lang][1]));
-        $flag = APP_ROOT . DS . 'resources' . DS . 'flags' . DS . $country . '.webp';
+        $country = strtolower(trim($data[$lang]));
+        $flag = 'assets' . DS . 'flags' . DS . $country . '.webp';
         if (!file_exists($flag)) {
           // Fallback: try country code from languages.php
           if (file_exists($languagesFile)) {
             $data = include $languagesFile;
             if (is_array($data) && isset($data[$lang][2])) {
               $country = strtolower(trim($data[$lang][2]));
-              $flag = APP_ROOT . DS . 'resources' . DS . 'flags' . DS . $country . '.webp';
+              $flag = 'assets' . DS . 'flags' . DS . $country . '.webp';
               if (file_exists($flag)) {
                 return $flag;
               } else {

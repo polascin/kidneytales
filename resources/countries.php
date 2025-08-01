@@ -123,7 +123,7 @@ return [
   'dsb' => 'de-bb', // Lower Sorbian (Brandenburg, Germany)
   'vec' => 'it-ve', // Venetian (Veneto, Italy)
   'wa' => 'be-wa', // Walloon (Wallonia, Belgium)
-  'rue' => 'ua', // Rusyn (Ukraine, main population)
+  'rue' => 'rue', // Rusyn (Carpatho-Ruthenia)
   'rom' => 'ro', // Romani (Romania, as default)
   'sco' => 'gb-sct', // Scots (Scotland)
   'sli' => 'de-sls', // Silesian (Silesia, Germany)
