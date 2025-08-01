@@ -1,31 +1,433 @@
 <?php
-
-declare(strict_types=1);
-
-// File: /languages/sk.php
-
 /**
- * Slovak language translations for Kidney Tales
- * 
+ * Slovak language file for Renal Tales
+ *
  * @author Ľubomír Polaščín
- * @package KidneyTales
- * @version 2005.08.1.0
- * 
+ * @version 2025.v1.0test
  */
 
 return [
-    'current_language_code' => 'sk',
-    'welcome_message' => 'Vitajte v Ľadvinových storkách',
-    'app_name' => 'Ľadvinové storky',
-    'app_description' => 'Viacjazyčná webová aplikácia pre príbehy a zdroje o zdraví obličiek.',
-    'contact_us' => 'Kontaktujte nás',
-    'about_us' => 'O nás',
-    'privacy_policy' => 'Zásady ochrany osobných údajov',
-    'terms_of_service' => 'Podmienky používania',
-    // Pridajte ďalšie preklady podľa potreby
+    // Application general
+    'app_title' => 'Ľadvinové príbehy',
+    'app_subtitle' => 'Viacjazyčná webová aplikácia',
+    'app_description' => 'Webová aplikácia na zdieľanie príbehov a rozprávok od komunity ľudí s poruchami obličiek, vrátane tých na dialýze a tých, ktorí mali alebo čakajú na transplantáciu obličky.',
+    'app_version' => 'Verzia 2025.v1.0test',
+    'app_author' => 'Lumpe Paskuden von Lumpenen aka Walter Kyo aka Walter Csoelle Kyo aka Lubomir Polascin',
+    'welcome' => 'Vitajte!',
+    'current_language' => 'Aktuálny jazyk',
+    'change' => 'Zmeniť',
+    'not_set' => 'nie je nastavené',
+    'filtered' => '[FILTROVANÉ]',
+    'seconds' => 'sekúnd',
+    'bytes' => 'bajtov',
+    'kb' => 'KB',
+    'mb' => 'MB',
+    'unknown' => 'Neznáme',
+    'yes' => 'Áno',
+    'no' => 'Nie',
+    'enabled' => 'Povolené',
+    'disabled' => 'Zakázané',
+    'available' => 'Dostupné',
+    'not_available' => 'Nie je dostupné',
+
+    // Error messages
+    'application_error' => 'Chyba aplikácie',
+    'service_unavailable' => 'Služba je dočasne nedostupná',
+    'try_again_later' => 'Prosím, skúste to znovu neskôr.',
+    'error' => 'Chyba',
+    'file' => 'Súbor',
+    'line' => 'Riadok',
+    'stack_trace' => 'Stack Trace',
+    'initialization_failed' => 'Inicializácia aplikácie zlyhala',
+    'debug_not_allowed' => 'Debug režim nie je dostupný z bezpečnostných dôvodov.',
+    'access_denied' => 'Prístup zamietnutý',
+    'security_violation' => 'Bezpečnostné porušenie zistené. Relácia ukončená.',
+
+    // Session management
+    'session_init_failed' => 'Inicializácia správcu relácií zlyhala',
+    'session_name_failed' => 'Nepodarilo sa nastaviť názov relácie',
+    'session_cookie_params_failed' => 'Nepodarilo sa nastaviť parametre cookie',
+    'session_config_failed' => 'Konfigurácia relácie zlyhala',
+    'session_start_failed' => 'Nepodarilo sa spustiť reláciu',
+    'sessions_disabled' => 'Relácie sú zakázané',
+    'session_disabled' => 'Relácia je zakázaná',
+    'session_none' => 'Žiadna relácia nie je spustená',
+    'session_active' => 'Relácia je aktívna',
+    'session_unknown' => 'Neznámy stav relácie',
+    'session_id_none' => 'Žiadne ID relácie',
+    'session_empty' => 'Relácia je prázdna',
+    'session_vardump' => 'Dump premenných relácie',
+    'session_information' => 'Informácie o relácii',
+    'session_json' => 'JSON relácie',
+    'session_debug' => 'Debug relácie',
+    'session_table' => 'Tabuľka relácie',
+    'session_statistics' => 'Štatistiky relácie',
+    'session_comprehensive' => 'Komplexné informácie o relácii',
+    'session_status' => 'Stav relácie',
+    'session_id' => 'ID relácie',
+    'session_name' => 'Názov relácie',
+    'session_data' => 'Dáta relácie',
+    'session_cookie_params' => 'Parametre cookie',
+    'session_key' => 'Kľúč',
+    'session_value' => 'Hodnota',
+    'session_type' => 'Typ',
+    'session_variables_count' => 'Počet premenných',
+    'session_data_size' => 'Veľkosť dát',
+    'session_max_lifetime' => 'Maximálna životnosť',
+    'session_cookie_lifetime' => 'Životnosť cookie',
+    'session_security_level' => 'Úroveň bezpečnosti',
+    'session_save_path' => 'Cesta uloženia',
+    'session_export_failed' => 'Export relácie zlyhal',
+    'session_regeneration_failed' => 'Regenerácia relácie zlyhala',
+    'session_destruction_failed' => 'Zničenie relácie zlyhalo',
+    'session_security_init_failed' => 'Inicializácia bezpečnosti zlyhala',
+    'session_log_dir_create_failed' => 'Nepodarilo sa vytvoriť adresár logov',
+    'session_security_log_failed' => 'Logovanie bezpečnostného porušenia zlyhalo',
+    'session_security_log_injection_failed' => 'Injekcia bezpečnostného logu zlyhala',
+
+    // Security messages
+    'security_violation_detected' => 'Bezpečnostné porušenie zistené. Relácia ukončená.',
+    'security_user_agent_mismatch' => 'Nesúlad user agenta',
+    'security_ip_mismatch' => 'Nesúlad IP adresy',
+    'security_session_timeout' => 'Časový limit relácie',
+    'security_hijacking_attempt' => 'Pokus o únos relácie zistený',
+    'security_invalid_token' => 'Neplatný bezpečnostný token',
+    'security_token_expired' => 'Bezpečnostný token vypršal',
+
+    // Server information
+    'server_information' => 'Informácie o serveri',
+    'application_information' => 'Informácie o aplikácii',
+    'user_agent' => 'User agent',
+    'ip_address' => 'IP adresa',
+    'server_software' => 'Server software',
+    'server_name' => 'Názov servera',
+    'server_protocol' => 'Protokol servera',
+    'request_method' => 'Metóda požiadavky',
+    'request_uri' => 'URI požiadavky',
+    'query_string' => 'Query string',
+    'document_root' => 'Document root',
+    'script_name' => 'Názov skriptu',
+    'app_title_item' => 'Názov aplikácie',
+    'current_language_code' => 'Kód aktuálneho jazyka',
+    'current_language_file' => 'Súbor aktuálneho jazyka',
+    'current_language_flag' => 'Vlajka aktuálneho jazyka',
+    'current_language_flag_alt' => 'Vlajka aktuálneho jazyka',
+
+    // Date and time
+    'datetime_placeholder' => 'Dátum, čas vrátane detailného internetového času @beat sa zobrazí tu.',
+    'debug_mode_enabled' => 'Debug režim je povolený.',
+    'service_information' => 'Informácie o službe',
+    'user_information' => 'Informácie o používateľovi:',
+    'footer_copyright' => 'Ľubomír Polaščín',
+
+    // Cookie and session parameters
+    'cookie_lifetime' => 'Životnosť',
+    'cookie_path' => 'Cesta',
+    'cookie_domain' => 'Doména',
+    'cookie_secure' => 'Bezpečné',
+    'cookie_httponly' => 'Len HTTP',
+    'cookie_samesite' => 'Rovnaká stránka',
+
+    // Log messages
+    'log_entry_timestamp' => 'Časová značka',
+    'log_entry_ip' => 'IP adresa',
+    'log_entry_user_agent' => 'User agent',
+    'log_entry_session_id' => 'ID relácie',
+    'log_entry_reason' => 'Dôvod',
+    'log_entry_request_uri' => 'URI požiadavky',
+
+    // User interface
+    'welcome_user' => 'Vitajte',
+    'user' => 'Používateľ',
+    'role' => 'Rola',
+    'logout' => 'Odhlásiť sa',
+    'user_data_unavailable' => 'Údaje používateľa nie sú dostupné',
+    'not_logged_in' => 'Nie ste prihlásený',
+    'login' => 'Prihlásiť sa',
+    'main_menu' => 'Hlavné menu',
+    'home' => 'Domov',
+    'stories' => 'Príbehy',
+    'community' => 'Komunita',
+    'resources' => 'Zdroje',
+    'about' => 'O nás',
+    'my_stories' => 'Moje príbehy',
+    'profile' => 'Profil',
+    'settings' => 'Nastavenia',
+    'register' => 'Registrovať sa',
+
+    // Content sections
+    'important_notes' => 'Dôležité poznámky',
+    'about_renal_tales' => 'O ľadvinových príbehoch',
+    'renal_tales_description' => 'Ľadvinové príbehy je podporná komunitná platforma, kde ľudia s poruchami obličiek môžu zdieľať svoje skúsenosti, nájsť podporu a spojiť sa s ostatnými na podobných cestách.',
+    'community_guidelines' => 'Pravidlá komunity',
+    'guideline_respectful' => 'Buďte úctiví a podporní ku všetkým členom komunity',
+    'guideline_privacy' => 'Rešpektujte súkromie a dôvernosť',
+    'guideline_medical' => 'Zdieľajte skúsenosti, nie lekárske rady',
+    'guideline_appropriate' => 'Udržujte obsah vhodný a relevantný',
+    'getting_started' => 'Začíname',
+    'getting_started_description' => 'Ste noví v našej komunite? Začnite čítaním niektorých príbehov, predstavte sa a zvážte zdieľanie vlastnej skúsenosti, keď budete pripravení.',
+    'support_resources' => 'Podporné zdroje',
+    'support_description' => 'Ak potrebujete okamžitú lekársku pomoc alebo ste v kríze, kontaktujte svojho poskytovateľa zdravotnej starostlivosti alebo pohotovostné služby.',
+
+    // Home page
+    'welcome_home' => 'Vitajte v ľadvinových príbehoch',
+    'home_intro' => 'Vitajte v našej podpornej komunite pre ľudí s poruchami obličiek. Tu môžete zdieľať svoj príbeh, čítať skúsenosti ostatných a nájsť podporu od ľudí, ktorí rozumejú vašej ceste.',
+    'home_intro2' => 'Táto webová aplikácia je navrhnutá na uľahčenie zdieľania osobných príbehov a rozprávok medzi jednotlivcami s poruchami obličiek, vrátane tých, ktorí podstupujú dialýzu, tých v pred- alebo po-dialyzačnom štádiu a jednotlivcov žijúcich bez obmedzení dialýzy. Táto platforma si kladie za cieľ podporiť komunitu, ktorá umožňuje používateľom spojiť sa, zdieľať skúsenosti a poskytovať poznatky, ktoré môžu pomôcť ostatným navigovať ich cesty so zdravím obličiek.',
+    'share_story' => 'Zdieľajte svoj príbeh',
+    'share_story_desc' => 'Vaša skúsenosť je dôležitá. Zdieľajte svoju cestu, aby ste inšpirovali a podporili ostatných.',
+    'start_sharing' => 'Začať zdieľať',
+    'read_stories' => 'Čítať príbehy',
+    'read_stories_desc' => 'Nájdite inšpiráciu a útěchu v skúsenostiach ostatných v našej komunite.',
+    'browse_stories' => 'Prehliadať príbehy',
+    'join_community' => 'Pripojte sa ku komunite',
+    'join_community_desc' => 'Spojte sa s ostatnými, zapojte sa do diskusií a budujte trvalé priateľstvá.',
+    'explore_community' => 'Preskúmať komunitu',
+
+    // Placeholder content
+    'stories_coming_soon' => 'Sekcia príbehov už čoskoro...',
+    'community_coming_soon' => 'Sekcia komunity už čoskoro...',
+    'resources_coming_soon' => 'Sekcia zdrojov už čoskoro...',
+    'about_coming_soon' => 'Sekcia o nás už čoskoro...',
+    'my_stories_coming_soon' => 'Sekcia mojich príbehov už čoskoro...',
+    'profile_coming_soon' => 'Sekcia profilu už čoskoro...',
+    'settings_coming_soon' => 'Sekcia nastavení už čoskoro...',
+
+    // Login page
+    'login_welcome' => 'Vitajte späť',
+    'login_subtitle' => 'Prihláste sa na prístup k vášmu účtu',
+    'email_or_username' => 'Email alebo používateľské meno',
+    'enter_email_username' => 'Zadajte svoju emailovú adresu alebo používateľské meno',
+    'password' => 'Heslo',
+    'enter_password' => 'Zadajte svoje heslo',
+    'remember_me' => 'Zapamätať si ma',
+    'sign_in' => 'Prihlásiť sa',
+    'forgot_password' => 'Zabudli ste heslo?',
+    'no_account' => 'Nemáte účet?',
+    'sign_up_here' => 'Zaregistrujte sa tu',
+    'back_to_home' => 'Späť domov',
+    'please_fill_required_fields' => 'Prosím, vyplňte všetky povinné polia.',
+
+    // Login validation
+    'invalid_csrf_token' => 'Neplatný bezpečnostný token. Prosím, skúste to znovu.',
+    'email_required' => 'Email je povinný.',
+    'email_invalid' => 'Prosím, zadajte platnú emailovú adresu.',
+    'password_required' => 'Heslo je povinné.',
+    'login_failed' => 'Neplatný email alebo heslo.',
+
+    // Language selection
+    'language_selection_unavailable' => 'Výber jazyka nie je dostupný',
+
+    // Time and date display
+    'day' => 'Deň',
+    'year' => 'Rok',
+    'week' => 'Týždeň',
+    'today_is' => 'Dnes je',
+
+    // Legacy language management (maintained for compatibility)
+    'language_selection' => 'Výber jazyka',
+    'language_change' => 'Zmeniť jazyk',
+    'language_changed' => 'Jazyk zmenený',
+    'language_not_found' => 'Jazykový súbor sa nenašiel',
+    'language_default' => 'Predvolený jazyk',
+    'language_default_missing' => 'Predvolený jazykový súbor chýba',
+    'language_switch' => 'Prepnúť jazyk',
+    'language_switch_success' => 'Jazyk úspešne zmenený',
+    'language_switch_error' => 'Chyba pri zmene jazyka'
 ];
-// Môžete pridať ďalšie páry kľúč-hodnota pre ďalšie preklady
-// Napríklad:
-// 'goodbye_message' => 'Dovidenia z Kidney Tales',  
-// 'error_message' => 'Vyskytla sa chyba, skúste to znova neskôr',
-// 'login_prompt' => 'Prosím, prihláste sa pre pokračovanie',
+?>
+    'not_available' => 'Nedostupné',
+    
+    // Error messages
+    'application_error' => 'Chyba aplikácie',
+    'service_unavailable' => 'Služba dočasne nedostupná',
+    'try_again_later' => 'Skúste to prosím neskôr.',
+    'error' => 'Chyba',
+    'file' => 'Súbor',
+    'line' => 'Riadok',
+    'stack_trace' => 'Trasovanie zásobníka',
+    'initialization_failed' => 'Inicializácia aplikácie zlyhala',
+    'debug_not_allowed' => 'Ladenie informácií nie je dostupné z bezpečnostných dôvodov.',
+    'access_denied' => 'Prístup odmietnutý',
+    'security_violation' => 'Detekované porušenie bezpečnosti. Relácia ukončená.',
+    
+    // Session management
+    'session_init_failed' => 'Inicializácia správcu relácií zlyhala',
+    'session_name_failed' => 'Nastavenie názvu relácie zlyhalo',
+    'session_cookie_params_failed' => 'Nastavenie parametrov cookie zlyhalo',
+    'session_config_failed' => 'Konfigurácia relácie zlyhala',
+    'session_start_failed' => 'Spustenie relácie zlyhalo',
+    'sessions_disabled' => 'Relácie sú zakázané',
+    'session_disabled' => 'Relácie sú zakázané',
+    'session_none' => 'Žiadna relácia nie je spustená',
+    'session_active' => 'Relácia je aktívna',
+    'session_unknown' => 'Neznámy stav relácie',
+    'session_id_none' => 'Žiadne ID relácie',
+    'session_empty' => 'Relácia je prázdna',
+    'session_vardump' => 'Výpis premenných relácie',
+    'session_information' => 'Informácie o relácii',
+    'session_json' => 'Relácia JSON',
+    'session_debug' => 'Ladenie relácie',
+    'session_table' => 'Tabuľka relácie',
+    'session_statistics' => 'Štatistiky relácie',
+    'session_comprehensive' => 'Komplexné informácie o relácii',
+    'session_status' => 'Stav relácie',
+    'session_id' => 'ID relácie',
+    'session_name' => 'Názov relácie',
+    'session_data' => 'Dáta relácie',
+    'session_cookie_params' => 'Parametre cookie',
+    'session_key' => 'Kľúč',
+    'session_value' => 'Hodnota',
+    'session_type' => 'Typ',
+    'session_variables_count' => 'Počet premenných',
+    'session_data_size' => 'Veľkosť dát',
+    'session_max_lifetime' => 'Maximálna životnosť',
+    'session_cookie_lifetime' => 'Životnosť cookie',
+    'session_security_level' => 'Úroveň bezpečnosti',
+    'session_save_path' => 'Cesta uloženia',
+    'session_export_failed' => 'Export relácie zlyhal',
+    'session_regeneration_failed' => 'Regenerácia relácie zlyhala',
+    'session_destruction_failed' => 'Zničenie relácie zlyhalo',
+    'session_security_init_failed' => 'Inicializácia bezpečnosti zlyhala',
+    'session_log_dir_create_failed' => 'Vytvorenie adresára logov zlyhalo',
+    'session_security_log_failed' => 'Zápis logu porušenia bezpečnosti zlyhal',
+    'session_security_log_injection_failed' => 'Bezpečnostné logovanie zlyhalo',
+    
+    // Security messages
+    'security_violation_detected' => 'Detekované porušenie bezpečnosti. Relácia ukončená.',
+    'security_user_agent_mismatch' => 'Nezhoda user agenta',
+    'security_ip_mismatch' => 'Nezhoda IP adresy',
+    'security_session_timeout' => 'Vypršanie relácie',
+    'security_hijacking_attempt' => 'Detekovaný pokus o únos relácie',
+    'security_invalid_token' => 'Neplatný bezpečnostný token',
+    'security_token_expired' => 'Bezpečnostný token vypršal',
+    
+    // Server information
+    'server_information' => 'Informácie o serveri',
+    'application_information' => 'Informácie o aplikácii',
+    'user_agent' => 'User Agent',
+    'ip_address' => 'IP adresa',
+    'server_software' => 'Serverový softvér',
+    'server_name' => 'Názov servera',
+    'server_protocol' => 'Serverový protokol',
+    'request_method' => 'Metóda požiadavky',
+    'request_uri' => 'URI požiadavky',
+    'query_string' => 'Reťazec dotazu',
+    'document_root' => 'Koreňový adresár dokumentu',
+    'script_name' => 'Názov skriptu',
+    'app_title_item' => 'Názov aplikácie',
+    'current_language_code' => 'Kód aktuálneho jazyka',
+    'current_language_file' => 'Súbor aktuálneho jazyka',
+    'current_language_flag' => 'Vlajka aktuálneho jazyka',
+    'current_language_flag_alt' => 'Vlajka aktuálneho jazyka',
+    
+    // Date and time
+    'datetime_placeholder' => 'Tu bude zobrazený dátum, čas, vrátane podrobného internetového času @beat.',
+    'debug_mode_enabled' => 'Režim ladenia je povolený.',
+    'service_information' => 'Informácie o službe',
+    'user_information' => 'Informácie o používateľovi:',
+    'footer_copyright' => 'Ľubomír Polaščín',
+    
+    // Cookie and session parameters
+    'cookie_lifetime' => 'Životnosť',
+    'cookie_path' => 'Cesta',
+    'cookie_domain' => 'Doména',
+    'cookie_secure' => 'Zabezpečené',
+    'cookie_httponly' => 'Iba HTTP',
+    'cookie_samesite' => 'SameSite',
+    
+    // Log messages
+    'log_entry_timestamp' => 'Časová značka',
+    'log_entry_ip' => 'IP adresa',
+    'log_entry_user_agent' => 'User Agent',
+    'log_entry_session_id' => 'ID relácie',
+    'log_entry_reason' => 'Dôvod',
+    'log_entry_request_uri' => 'URI požiadavky',
+    
+    // Používateľské rozhranie
+    'welcome_user' => 'Vitajte',
+    'user' => 'Používateľ',
+    'role' => 'Rola',
+    'logout' => 'Odhlásiť sa',
+    'user_data_unavailable' => 'Údaje používateľa nie sú dostupné',
+    'not_logged_in' => 'Neprihlásený',
+    'login' => 'Prihlásiť sa',
+    'main_menu' => 'Hlavné menu',
+    'home' => 'Domov',
+    'stories' => 'Príbehy',
+    'community' => 'Komunita',
+    'resources' => 'Zdroje',
+    'about' => 'O nás',
+    'my_stories' => 'Moje príbehy',
+    'profile' => 'Profil',
+    'settings' => 'Nastavenia',
+    'register' => 'Registrovať sa',
+    
+    // Sekcie obsahu
+    'important_notes' => 'Dôležité poznámky',
+    'about_renal_tales' => 'O Ľadvinových príbehoch',
+    'renal_tales_description' => 'Ľadvinové príbehy sú podporná komunitná platforma, kde ľudia ovplyvnení poruchami obličiek môžu zdieľať svoje skúsenosti, nájsť podporu a spojiť sa s ostatnými na podobných cestách.',
+    'community_guidelines' => 'Pravidlá komunity',
+    'guideline_respectful' => 'Buďte úctiví a podporní ku všetkým členom komunity',
+    'guideline_privacy' => 'Rešpektujte súkromie a dôvernosť',
+    'guideline_medical' => 'Zdieľajte skúsenosti, nie lekárske rady',
+    'guideline_appropriate' => 'Udržujte obsah primeraný a relevantný',
+    'getting_started' => 'Začíname',
+    'getting_started_description' => 'Ste noví v našej komunite? Začnite čítaním príbehov, predstavte sa a zvážte zdieľanie svojej vlastnej skúsenosti, keď budete pripravení.',
+    'support_resources' => 'Zdroje podpory',
+    'support_description' => 'Ak potrebujete okamžitú lekársku pomoc alebo ste v kríze, kontaktujte svojho poskytovateľa zdravotnej starostlivosti alebo záchranné služby.',
+    
+    // Domovská stránka
+    'welcome_home' => 'Vitajte v Ľadvinových príbehoch',
+    'home_intro' => 'Vitajte v našej podpornej komunite pre ľudí ovplyvnených poruchami obličiek. Tu môžete zdieľať svoj príbeh, čítať skúsenosti ostatných a nájsť podporu od ľudí, ktorí rozumejú vašej ceste.',
+    'home_intro2' => 'Táto webová aplikácia je navrhnutá na uľahčenie zdieľania osobných príbehov a rozprávok medzi jednotlivcami ovplyvnenými poruchami obličiek, vrátane tých, ktorí podstupujú dialýzu, tých v pred- alebo podialyzačnej fáze a jednotlivcov žijúcich bez obmedzení dialýzy.',
+    'share_story' => 'Zdieľajte svoj príbeh',
+    'share_story_desc' => 'Vaša skúsenosť má význam. Zdieľajte svoju cestu na inšpiráciu a podporu ostatných.',
+    'start_sharing' => 'Začať zdieľanie',
+    'read_stories' => 'Čítať príbehy',
+    'read_stories_desc' => 'Nájdite inšpiráciu a útechu v skúsenostiach ostatných v našej komunite.',
+    'browse_stories' => 'Prehliadať príbehy',
+    'join_community' => 'Pripojiť sa ku komunite',
+    'join_community_desc' => 'Spojte sa s ostatnými, účastnite sa diskusií a budujte trvalé priateľstvá.',
+    'explore_community' => 'Preskúmať komunitu',
+    
+    // Zástupný obsah
+    'stories_coming_soon' => 'Sekcia príbehov bude čoskoro...',
+    'community_coming_soon' => 'Sekcia komunity bude čoskoro...',
+    'resources_coming_soon' => 'Sekcia zdrojov bude čoskoro...',
+    'about_coming_soon' => 'Sekcia o nás bude čoskoro...',
+    'my_stories_coming_soon' => 'Sekcia moje príbehy bude čoskoro...',
+    'profile_coming_soon' => 'Sekcia profil bude čoskoro...',
+    'settings_coming_soon' => 'Sekcia nastavenia bude čoskoro...',
+    
+    // Prihlasovacia stránka
+    'login_welcome' => 'Vitajte späť',
+    'login_subtitle' => 'Prihláste sa pre prístup k vášmu účtu',
+    'email_or_username' => 'Email alebo používateľské meno',
+    'enter_email_username' => 'Zadajte váš email alebo používateľské meno',
+    'password' => 'Heslo',
+    'enter_password' => 'Zadajte vaše heslo',
+    'remember_me' => 'Zapamätať si ma',
+    'sign_in' => 'Prihlásiť sa',
+    'forgot_password' => 'Zabudli ste heslo?',
+    'no_account' => 'Nemáte účet?',
+    'sign_up_here' => 'Registrujte sa tu',
+    'back_to_home' => 'Späť na domovskú stránku',
+    'please_fill_required_fields' => 'Prosím vyplňte všetky povinné polia.',
+    
+    // Validácia prihlásenia
+    'invalid_csrf_token' => 'Neplatný bezpečnostný token. Skúste to prosím znovu.',
+    'email_required' => 'Email je povinný.',
+    'email_invalid' => 'Zadajte prosím platnú emailovú adresu.',
+    'password_required' => 'Heslo je povinné.',
+    'login_failed' => 'Neplatný email alebo heslo.',
+    
+    // Výber jazyka
+    'language_selection_unavailable' => 'Výber jazyka nie je dostupný',
+    
+    // Zobrazenie času a dátumu
+    'day' => 'Deň',
+    'year' => 'Rok',
+    'week' => 'Týždeň',
+    'today_is' => 'Dnes je',
+];
+?>
