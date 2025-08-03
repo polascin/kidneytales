@@ -1,4 +1,3 @@
-<?= PHP_EOL; ?>
 <!-- The LANGUAGE COUNTRY FLAGS SELECTOR -->
 <div class="flags-selector-container">
   <?php
@@ -26,4 +25,3 @@
   ?>
 </div>
 <!-- The END Language Country Flags Selector -->
-<?= PHP_EOL; ?>

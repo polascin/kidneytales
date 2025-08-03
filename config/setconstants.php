@@ -15,3 +15,6 @@ declare(strict_types=1);
 define('DEFAULT_LANGUAGE', 'en');
 define('APP_NAME', 'Kidney Tales');
 define('LANGUAGES_PATH', dirname(__DIR__) . DS . 'languages' . DS);
+define('APP_LOCALE', 'en_US');
+define('APP_LANG', 'en');
+define('APP_COUNTRY', 'US');

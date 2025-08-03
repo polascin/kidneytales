@@ -86,11 +86,17 @@ class LanguageModel
       $translations = include $file;
       if (is_array($translations)) {
         self::$t = $translations;
+        // Set and get locale after loading translations
+        $locale = self::getCurrentLocale();
+        self::setCurrentLocale($locale);
         return;
       }
     }
     // Fallback: empty translations
     self::$t = [];
+    // Set and get locale even if translations are empty
+    $locale = self::getCurrentLocale();
+    self::setCurrentLocale($locale);
   }
 
   /**
@@ -185,8 +191,122 @@ class LanguageModel
     }
   }
 
-  public static function getCurrentLanguageCode() : string
+  public static function getCurrentLanguageCode(): string
   {
     return self::$currentLanguageCode = LanguageController::detectCurrentLanguage();
   }
+
+  /**
+   * Get the country code for a given language code, using the country code from countries.php.
+   * If the country code is missing, falls back to the language code itself.
+   * @param string $lang Language code (e.g., 'en', 'sk')
+   * @return string|null Country code if found, or language code if not
+   */
+  public static function getCurrentCountryCode(string $lang): ?string
+  {
+    $countriesFile = APP_ROOT . DS . 'resources' . DS . 'countries.php';
+    $languagesFile = APP_ROOT . DS . 'resources' . DS . 'languages.php';
+    if (file_exists($countriesFile)) {
+      $data = include $countriesFile;
+      if (is_array($data) && isset($data[$lang])) {
+        // Use country code from countries.php
+        $country = strtolower(trim($data[$lang]));
+        $flag = 'assets' . DS . 'flags' . DS . $country . '.webp';
+        if (!file_exists($flag)) {
+          // Fallback: try country code from languages.php
+          if (file_exists($languagesFile)) {
+            $data = include $languagesFile;
+            if (is_array($data) && isset($data[$lang][2])) {
+              $country = strtolower(trim($data[$lang][2]));
+              $flag = 'assets' . DS . 'flags' . DS . $country . '.webp';
+              if (file_exists($flag)) {
+                return $country;
+              } else {
+                // Fallback to UN flag if not found
+                return $lang;
+              }
+            } else {
+              return $lang;
+            }
+          } else {
+            return $lang;
+          }
+        } else {
+          return $country;
+        }
+      } else {
+        return $lang;
+      }
+    } else {
+      return $lang;
+    }
+  }
+
+  /**
+   * Returns all supported languages and their supported countries.
+   * Uses data from language.php and countries.php.
+   */
+  public static function getSupportedLanguages()
+  {
+    // Adjust these paths as needed for your project structure
+    $languagesFile = __DIR__ . '/../data/language.php';
+    $countriesFile = __DIR__ . '/../data/countries.php';
+
+    // language.php should return array like ['en' => ['name' => 'English', 'native' => 'English', 'countries' => ['US', 'GB', ...]], ...]
+    // countries.php should return array like ['US' => 'United States', 'GB' => 'United Kingdom', ...]
+    $languages = file_exists($languagesFile) ? include $languagesFile : [];
+    $countries = file_exists($countriesFile) ? include $countriesFile : [];
+
+    $supported = [];
+    foreach ($languages as $langCode => $langData) {
+      // Only include countries that exist in countries.php
+      $validCountries = [];
+      if (isset($langData['countries']) && is_array($langData['countries'])) {
+        foreach ($langData['countries'] as $countryCode) {
+          if (isset($countries[$countryCode])) {
+            $validCountries[] = $countryCode;
+          }
+        }
+      }
+      if (!empty($validCountries)) {
+        $supported[$langCode] = [
+          'name' => $langData['name'] ?? $langCode,
+          'native' => $langData['native'] ?? $langData['name'] ?? $langCode,
+          'countries' => $validCountries,
+        ];
+      }
+    }
+    return $supported;
+  }
+
+    /**
+     * Get the current locale string (e.g., 'en_US') from current language and country code.
+     * @return string
+     */
+    public static function getCurrentLocale(): string
+    {
+        $lang = self::getCurrentLanguageCode();
+        $country = self::getCurrentCountryCode($lang);
+        return strtolower($lang) . '_' . strtoupper($country);
+    }
+
+    /**
+     * Set the current language and country code from a locale string (e.g., 'en_US').
+     * @param string $locale
+     * @return void
+     */
+    public static function setCurrentLocale(string $locale): void
+    {
+        $parts = preg_split('/[_\-]/', $locale);
+        if (count($parts) === 2) {
+            self::$currentLanguageCode = strtolower($parts[0]);
+            $_SESSION['country_code'] = strtoupper($parts[1]);
+            $localeString = strtolower($parts[0]) . '_' . strtoupper($parts[1]) . '.UTF-8';
+            setlocale(LC_ALL, $localeString);
+        } elseif (count($parts) === 1) {
+            self::$currentLanguageCode = strtolower($parts[0]);
+            setlocale(LC_ALL, strtolower($parts[0]) . '.UTF-8');
+        }
+        // Optionally, reload translations or perform other updates here
+    }
 }
