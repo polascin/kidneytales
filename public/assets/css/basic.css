@@ -274,18 +274,15 @@ table {
   padding: 0;
 }
 html {
-  font-size: 16px;
-  /* Base font size */
-  scroll-behavior: smooth;
-  /* Smooth scrolling for anchor links */
-  color-scheme: light dark;
-  /* Support for light and dark modes */
+  font-size: 16px;  /* Base font size */
+  scroll-behavior: smooth;  /* Smooth scrolling for anchor links */
+  color-scheme: light dark;  /* Support for light and dark modes */
   font-family: var(--system-font);
-  background-color: var(--color-bg-alt);
+  background-color: var(--background-color);
 }
 body {
+  max-width: 90%;
   background: var(--color-bg);
-  max-width: 1280px;
   margin: 0 auto 0 auto;
   padding: 0;
   font-family: var(--main-font);
@@ -331,8 +328,9 @@ a:focus {
   display: flex;
   flex-flow: row nowrap;
   width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
   padding: 1rem;
+  line-height: normal;
   border: thin solid var(--panel-bg);
   border-radius: 1.8rem;
   background-color: var(--panel-bg);  
@@ -352,19 +350,20 @@ a:focus {
 .header-left {
   flex-basis: content;
   flex-grow: 1;
-  flex-shrink: 3;
+  flex-shrink: 1;
   text-align: left;
   border: thin solid transparent;
 }
 .header-center {
-  flex-basis: content;
+  flex-basis: 50rem;
   flex-grow: 1;
   flex-shrink: 1;
+  padding: 1rem;
   text-align: center;
   border: thin solid transparent;
 }
 .header-right {
-  flex-basis: content;
+  flex-basis: 25rem;
   flex-grow: 1;
   flex-shrink: 1;
   text-align: right;
@@ -397,19 +396,19 @@ a:focus {
   font-weight: bold;
   color: var(--accent-color);
   font-variant: small-caps;
-  text-shadow: var(--accent-darker) 1px 1px 2px, var(--accent-color) 0 0 25px, var(--accent-lightest) 0 0 10px;
+  text-shadow: var(--primary-dark) 1px 1px 2px, var(--title-color) 0 0 25px, var(--accent-lightest) 0 0 10px;
 }
 .header-left h3 {
   font-size: 0.75rem;
   font-style: italic;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 .header-left h4 {
-  font-size: 0.8rem;
-  font-weight: bold;
+  font-size: 0.75rem;
+  font-weight: normal;
   font-style: italic;
-  color: var(--secondary-dark);
-  text-shadow: var(--color-grey) 1px 1px 2px, var(--secondary-dark) 0 0 25px, var(--secondary-color) 0 0 10px;
+  margin: 0rem 0 0.25rem 0;
+  color: var(--text-color);
 }
 .header-left h5 {
   font-size: 1rem;
@@ -419,8 +418,17 @@ a:focus {
   font-size: 0.75rem;
 }
 .description {
-  font-size: 0.6rem;
+  margin: 0; padding: 0; border: 0;
+  font-size: 0.8rem;
   font-style: italic;
   color: var(--text-color);
-  clear: both;
+}
+.userinfo {
+  display: flex;
+  flex-flow: column wrap;
+  float: right;
+}
+.flag {
+  width: 100%;
+  height: auto;
 }
