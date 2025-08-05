@@ -14,10 +14,10 @@ declare(strict_types=1);
 
 // Define application root and directory separator if not already defined
 if (!defined('APP_ROOT')) {
-    define('APP_ROOT', dirname(__DIR__));
+  define('APP_ROOT', __DIR__);
 }
 if (!defined('DS')) {
-    define('DS', DIRECTORY_SEPARATOR);
+  define('DS', DIRECTORY_SEPARATOR);
 }
 
 // Load configuration constants
