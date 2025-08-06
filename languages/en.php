@@ -133,7 +133,7 @@ return [
     'datetime_placeholder' => 'Date, time including detailed internet time @beat will be displayed here.',
     'debug_mode_enabled' => 'Debug mode is enabled.',
     'service_information' => 'Service information',
-    'user_information' => 'User information:',
+    'user_information' => 'User information',
     'footer_copyright' => 'Ľubomír Polaščín',
 
     // Cookie and session parameters
@@ -155,6 +155,7 @@ return [
     // User interface
     'welcome_user' => 'Welcome',
     'user' => 'User',
+    'user_email' => 'User`s e-mail',
     'role' => 'Role',
     'logout' => 'Logout',
     'user_data_unavailable' => 'User data unavailable',
@@ -304,6 +305,7 @@ return [
     'register_title' => 'Sign Up',
     'register_subtitle' => 'Join our community',
     'register_description' => 'Create an account to share your stories and connect with others in our supportive community.',
+    'name' => 'Name',
     'full_name' => 'Full Name',
     'email' => 'Email',
     'username' => 'Username',

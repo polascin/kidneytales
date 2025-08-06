@@ -10,9 +10,6 @@
   width: 90%;
   margin: 0 auto; padding: 0;
   border: thin solid transparent;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* ensures it stays above other content */ 
 }
 .language-selector-container select {
   font-family: var(--display-font);

@@ -12,6 +12,7 @@ declare(strict_types=1);
  * @version 2005.08.1.0
  */
 
+define('APP_ENV', 'development');
 define('DEFAULT_LANGUAGE', 'en');
 define('APP_NAME', 'Kidney Tales');
 define('LANGUAGES_PATH', dirname(__DIR__) . DS . 'languages' . DS);

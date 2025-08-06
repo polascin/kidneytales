@@ -196,6 +196,7 @@ table {
   --color-grey: grey;
   --color-red: red;
   --color-purple: purple;
+  --color-ghostwhite: ghostwhite;
 
   --title-color: #a7c6ed;
   /* Pastel Blue */
@@ -337,20 +338,13 @@ a:focus {
 
 /* Header */
 .header-container {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 90%;
-  margin: 0 auto 1rem auto;
-  padding: 1rem;
-  line-height: normal;
-  border: thin solid var(--panel-bg);
-  border-radius: 1.8rem;
-  background-color: var(--panel-bg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Adds a subtle shadow for depth */
-  border-color: var(--panel-border);
-  /* Light Gray Border for Panels */
+  margin: 0 auto 0 auto;
+  font-family: var(--heading-font);
   color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* ensures it stays above other content */
 }
 
 .header-container::before {
@@ -365,25 +359,47 @@ a:focus {
   clear: both;
 }
 
+.main-header-content-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  line-height: normal;
+  border: thin solid var(--color-border);
+  border-radius: 1.8rem;
+  background-color: var(--panel-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow for depth */
+  color: var(--text-color);
+}
+
+.main-header-content-container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header-content-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .header-left {
-  flex-basis: content;
-  flex-grow: 1;
+  flex-grow: 2;
   flex-shrink: 1;
   text-align: left;
   border: thin solid transparent;
 }
 
 .header-center {
-  flex-basis: 50rem;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 1rem;
   text-align: center;
   border: thin solid transparent;
 }
 
 .header-right {
-  flex-basis: 25rem;
   flex-grow: 1;
   flex-shrink: 1;
   text-align: right;
@@ -391,7 +407,8 @@ a:focus {
 }
 
 .logoimg {
-  width: 25%;
+  width: 12rem;
+  height: auto;
   margin: 0;
   float: left;
   border: thin solid transparent;
@@ -424,33 +441,34 @@ a:focus {
 }
 
 .header-left h3 {
+  margin: 0 0 0.25rem 0;
   font-size: 0.75rem;
   font-style: italic;
   color: var(--color-primary);
 }
 
 .header-left h4 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: normal;
   font-style: italic;
-  margin: 0rem 0 0.25rem 0;
   color: var(--text-color);
 }
 
 .header-left h5 {
-  font-size: 1rem;
-  clear: both;
+  font-size: 0.75rem;
+  margin: 0.5rem 0 0 0;
 }
 
 .header-left h6 {
   font-size: 0.75rem;
+  font-family: var(--system-font);
 }
 
 .description {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-style: italic;
   color: var(--text-color);
 }
@@ -462,6 +480,35 @@ a:focus {
 }
 
 .flag {
-  width: 100%;
+  width: 6rem;
   height: auto;
+}
+
+.current-time-container{
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.5rem;
+  background-color: var(--color-ghostwhite);
+  border: thin solid var(--panel-border);
+  box-shadow: 0px 2px 4px var(--color-silver);
+}
+
+.current-internet-time {
+  margin: 0 0 0.25rem 0;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-gray)
+}
+
+.current-time {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--color-gray)
+}
+
+.timezone {
+  font-size: 0.5rem;
+  text-decoration: none;
+  color: var(--color-gray)
 }

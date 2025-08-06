@@ -3,7 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title><?= isset($t['app_title']) ? htmlspecialchars($t['app_title']) : APP_NAME; ?></title>
-  
+
+  <?php
+  if (defined('APP_ENV') && APP_ENV === 'development') {
+      echo '<meta http-equiv="refresh" content="30">' . PHP_EOL;
+  }
+  ?>
+    
   <!-- Favicon -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

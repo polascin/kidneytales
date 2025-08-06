@@ -1,41 +1,46 @@
-<div style="margin-left: 0.6rem; margin-right: 0.6rem; margin-bottom: 0.6rem;">
-  <div style="border-bottom: solid thin gray; padding: 0.3rem;">
-    <a href="https://en.wikipedia.org/wiki/Swatch_Internet_Time" target="_blank" style="color: gray; text-decoration: none; font-weight: bold; font-size: larger;">
+<div class="current-time-container">
+  <div class="current-internet-time">
+    <a href="https://en.wikipedia.org/wiki/Swatch_Internet_Time" target="_blank" class="current-internet-time">
       <span>@</span><span id="beatsTime"></span>
     </a>
   </div>
-  <div>
-    <br>
-    <a href="https://time.is/" target="_blank" style="text-decoration: none; color: gray;">
-      <span><?= ((isset($t['day'])) ? $t['day'] : 'Day') . ': ' ?>&nbsp;</span><span id="dayOfYear" style="font-weight: bold;"></span>
-      <span>&nbsp;&nbsp;<?= ((isset($t['year'])) ? $t['year'] : 'Year') . ': ' ?>&nbsp;</span><span id="currentYear" style="font-weight: bolder;"></span>
-      <span>&nbsp;&nbsp;<?= ((isset($t['week'])) ? $t['week'] : 'Week') . ': ' ?>&nbsp;</span><span id="weekNumber" style="font-weight: bold;"></span>
-      <br>
-      <span>&nbsp;<?= ((isset($t['today_is'])) ? $t['today_is'] : 'Today is') . ' ' ?>&nbsp;</span><span id="dayOfWeek" style="font-weight: bold;"></span>
-      <span id="dayOfMonth" style="font-weight: bold;"></span>.
-      <span id="monthName" style="font-weight: bold;"></span>
-      <span id="dateYear" style="font-weight: bold;"></span>
-      <span id="currentTime" style="font-weight: bold;"></span>
-      <br>
-      <span>(</span><span id="timeZone" style="font-style: italic; font-variant: small-caps; font-size: small;"></span><span>)</span>
+  <div class="current-time">
+    <a href="https://time.is/" target="_blank" class="current-time">
+      <div class="current-time">
+        <span><?= ((isset($t['day'])) ? $t['day'] : 'Day') . ': ' ?>&nbsp;</span><span id="dayOfYear" style="font-weight: bold;"></span>
+        <span>&nbsp;&nbsp;<?= ((isset($t['year'])) ? $t['year'] : 'Year') . ': ' ?>&nbsp;</span><span id="currentYear" style="font-weight: bolder;"></span>
+        <span>&nbsp;&nbsp;<?= ((isset($t['week'])) ? $t['week'] : 'Week') . ': ' ?>&nbsp;</span><span id="weekNumber" style="font-weight: bold;"></span>
+      </div>
+      <div class="current-time">
+        <span>&nbsp;<?= ((isset($t['today_is'])) ? $t['today_is'] : 'Today is') . ' ' ?>&nbsp;</span><span id="dayOfWeek" style="font-weight: bold;"></span>
+        <span id="dayOfMonth" style="font-weight: bold;"></span>.
+        <span id="monthName" style="font-weight: bold;"></span>
+        <span id="dateYear" style="font-weight: bold;"></span>
+        <span id="currentTime" style="font-weight: bold;"></span>
+      </div>
+      <div class="timezone">
+        <span>(</span><span id="timeZone"></span><span>)</span>
+      </div>
     </a>
   </div>
 </div>
 <script>
   // Get current locale, language, and country from PHP LanguageModel class for use in JS
   <?php
-    use KidneyTales\Models\LanguageModel;
-    $currentLocale = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentLocale')
-      ? LanguageModel::getCurrentLocale()
-      : ((isset($t['locale'])) ? $t['locale'] : (defined('APP_LOCALE') ? APP_LOCALE : 'en-US'));
-    // Convert underscore to dash for JS locale
-    $jsLocale = str_replace('_', '-', $currentLocale);
-    $currentLanguage = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentLanguageCode')
-      ? LanguageModel::getCurrentLanguageCode()
-      : ((isset($t['lang'])) ? $t['lang'] : (defined('APP_LANG') ? APP_LANG : 'en'));
-    $currentCountry = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentCountryCode')
-      ? LanguageModel::getCurrentCountryCode($currentLanguage)
-      : ((isset($t['country'])) ? $t['country'] : (defined('APP_COUNTRY') ? APP_COUNTRY : 'US'));
+
+  use KidneyTales\Models\LanguageModel;
+
+  $currentLocale = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentLocale')
+    ? LanguageModel::getCurrentLocale()
+    : ((isset($t['locale'])) ? $t['locale'] : (defined('APP_LOCALE') ? APP_LOCALE : 'en-US'));
+  // Convert underscore to dash for JS locale
+  $jsLocale = str_replace('_', '-', $currentLocale);
+  $currentLanguage = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentLanguageCode')
+    ? LanguageModel::getCurrentLanguageCode()
+    : ((isset($t['lang'])) ? $t['lang'] : (defined('APP_LANG') ? APP_LANG : 'en'));
+  $currentCountry = method_exists('KidneyTales\Models\LanguageModel', 'getCurrentCountryCode')
+    ? LanguageModel::getCurrentCountryCode($currentLanguage)
+    : ((isset($t['country'])) ? $t['country'] : (defined('APP_COUNTRY') ? APP_COUNTRY : 'US'));
   ?>
   const currentLocale = "<?= $jsLocale ?>";
   const currentLanguage = "<?= $currentLanguage ?>";
@@ -49,16 +54,32 @@
 
     let dayOfWeek, monthName, currentTime, timeZone;
     try {
-      dayOfWeek = now.toLocaleString(locale, { weekday: 'long' });
-      monthName = now.toLocaleString(locale, { month: 'long' });
-      currentTime = now.toLocaleTimeString(locale, { timeZoneName: 'short' });
-      timeZone = new Intl.DateTimeFormat(locale, { timeZoneName: 'long' }).format(now);
+      dayOfWeek = now.toLocaleString(locale, {
+        weekday: 'long'
+      });
+      monthName = now.toLocaleString(locale, {
+        month: 'long'
+      });
+      currentTime = now.toLocaleTimeString(locale, {
+        timeZoneName: 'short'
+      });
+      timeZone = new Intl.DateTimeFormat(locale, {
+        timeZoneName: 'long'
+      }).format(now);
     } catch (e) {
       // fallback to en-US
-      dayOfWeek = now.toLocaleString('en-US', { weekday: 'long' });
-      monthName = now.toLocaleString('en-US', { month: 'long' });
-      currentTime = now.toLocaleTimeString('en-US', { timeZoneName: 'short' });
-      timeZone = new Intl.DateTimeFormat('en-US', { timeZoneName: 'long' }).format(now);
+      dayOfWeek = now.toLocaleString('en-US', {
+        weekday: 'long'
+      });
+      monthName = now.toLocaleString('en-US', {
+        month: 'long'
+      });
+      currentTime = now.toLocaleTimeString('en-US', {
+        timeZoneName: 'short'
+      });
+      timeZone = new Intl.DateTimeFormat('en-US', {
+        timeZoneName: 'long'
+      }).format(now);
     }
 
     setText('dayOfYear', getDayOfYear(now));

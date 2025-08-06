@@ -119,7 +119,7 @@ return [
   'datetime_placeholder' => 'Dátum, čas vrátane detailného internetového času @beat sa zobrazí tu.',
   'debug_mode_enabled' => 'Debug režim je povolený.',
   'service_information' => 'Informácie o službe',
-  'user_information' => 'Informácie o používateľovi:',
+  'user_information' => 'Informácie o používateľovi',
   'footer_copyright' => 'Ľubomír Polaščín',
 
   // Cookie and session parameters
@@ -325,7 +325,7 @@ return [
   'datetime_placeholder' => 'Tu bude zobrazený dátum, čas, vrátane podrobného internetového času @beat.',
   'debug_mode_enabled' => 'Režim ladenia je povolený.',
   'service_information' => 'Informácie o službe',
-  'user_information' => 'Informácie o používateľovi:',
+  'user_information' => 'Informácie o používateľovi',
   'footer_copyright' => 'Ľubomír Polaščín',
 
   // Cookie and session parameters
