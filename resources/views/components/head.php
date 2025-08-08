@@ -5,8 +5,8 @@
   <title><?= isset($t['app_title']) ? htmlspecialchars($t['app_title']) : APP_NAME; ?></title>
 
   <?php
-  if (defined('APP_ENV') && APP_ENV === 'development') {
-      echo '<meta http-equiv="refresh" content="30">' . PHP_EOL;
+  if ((defined('APP_ENV') && APP_ENV === 'development') || (defined('APP_DEBUG') && APP_DEBUG)) {
+      echo '<meta http-equiv="refresh" content="300">' . PHP_EOL;
   }
   ?>
     

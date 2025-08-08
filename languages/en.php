@@ -16,7 +16,7 @@ declare(strict_types=1);
 return [
     // Application general
     'current_language_code' => 'en',
-    'welcome_message' => 'Welcome to Kidney Tales',
+    'welcome_message' => 'Welcome to Kidney Stories',
     'app_name' => 'Kidney Stories',
     'app_logo' => 'Application Logo',
     'app_title' => 'Kidney Stories',
@@ -178,8 +178,8 @@ return [
     'kidney_tales_description' => 'Kidney Tales is a supportive community platform where people affected by kidney disorders can share their experiences, find support, and connect with others on similar journeys.',
     'community_guidelines' => 'Community Guidelines',
     'guideline_respectful' => 'Be respectful and supportive to all community members',
-    'guideline_privacy' => 'Respect privacy and confidentiality',
-    'guideline_medical' => 'Share experiences, not medical advice',
+    'guideline_privacy' => 'Respect privacy and confidentiality, respect the privacy of others and do not share personal information without consent.',
+    'guideline_medical' => 'Share experiences, not medical advice. Do not provide medical advice or share personal medical information.',
     'guideline_appropriate' => 'Keep content appropriate and relevant',
     'getting_started' => 'Getting Started',
     'getting_started_description' => 'New to our community? Start by reading some stories, introduce yourself, and consider sharing your own experience when you\'re ready.',

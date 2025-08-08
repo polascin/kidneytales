@@ -16,7 +16,7 @@
       <h3><?= (isset($t['app_subtitle']) ? $t['app_subtitle'] : 'A Multilingual Web Application'); ?></h3>
       <h4><span class="description"><?= (isset($t['website']) ? $t['website'] : 'WebSite') . ': '; ?></span>&nbsp;<a title="<?= (isset($t['app_url']) ? $t['app_url'] : 'https://www.ladvina.eu/'); ?>" href="<?= (isset($t['app_url']) ? $t['app_url'] : 'https://www.ladvina.eu/'); ?>"><?= (isset($t['app_url']) ? $t['app_url'] : 'https://www.ladvina.eu/'); ?></a></h4>
       <h4><span class="description"><?= (isset($t['email']) ? $t['email'] : 'E-Mail') . ': '; ?></span>&nbsp;&nbsp;&nbsp;<a title="<?= (isset($t['app_email']) ? $t['app_email'] : 'info@ladvina.eu'); ?>" href="mailto:<?= (isset($t['app_email']) ? $t['app_email'] : 'info@ladvina.eu'); ?>"><?= (isset($t['app_email']) ? $t['app_email'] : 'info@ladvina.eu'); ?></a></h4>
-      <h5><?= (isset($t['app_version']) ? $t['app_version'] : '2005.08.01.01'); ?></h5>
+      <h5><?= (isset($t['app_version']) ? $t['app_version'] : 'Version 2005.08.01.01'); ?></h5>
       <h6><?= (isset($t['app_author']) ? $t['app_author'] : 'Lumpe Paskuden von Lumpenen aka Walter Kyo aka Walter Csoelle aka Ľubomír Polaščín'); ?></h6>
     </div>
 
