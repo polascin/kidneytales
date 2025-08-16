@@ -1,15 +1,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title><?= isset($t['app_title']) ? htmlspecialchars($t['app_title']) : APP_NAME; ?></title>
 
   <?php
-  if ((defined('APP_ENV') && APP_ENV === 'development') || (defined('APP_DEBUG') && APP_DEBUG)) {
-      echo '<meta http-equiv="refresh" content="300">' . PHP_EOL;
+  if (!defined('APP_DEBUG')) {
+    define('APP_DEBUG', false);
+  }
+  if ((defined('APP_ENV') && APP_ENV === 'development') || (APP_DEBUG)) {
+    echo '<meta http-equiv="refresh" content="300">' . PHP_EOL;
   }
   ?>
-    
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -26,7 +29,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007bff">
   <meta name="msapplication-TileColor" content="#007bff">
   <meta name="msapplication-config" content="/browserconfig.xml">
-  
+
   <!-- Meta Tags for Content -->
   <meta name="application-name" content="<?= isset($t['app_name']) ? htmlspecialchars($t['app_name']) : APP_NAME; ?>">
   <meta name="description" content="<?= isset($t['app_description']) ? htmlspecialchars($t['app_description']) : 'A multilingual web application for kidney health stories and resources.'; ?>">
@@ -39,40 +42,48 @@
   <meta name="generator" content="Kidney Tales Content Management System (CMS) and Framework and Code Development by Lubomir Polascin">
   <meta name="theme-color" content="#007bff">
   <meta name="rating" content="General">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="<?= htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) ?>">
-  
+
   <!-- Language and alternate -->
   <meta http-equiv="content-language" content="<?= htmlspecialchars($currentLanguageCode) ?>">
   <link rel="alternate" href="/" hreflang="x-default">
   <link rel="alternate" href="/en/" hreflang="en">
   <link rel="alternate" href="/sk/" hreflang="sk">
-  
+
   <!-- Open Graph for social sharing -->
   <meta property="og:title" content="<?= isset($t['app_name']) ? htmlspecialchars($t['app_name']) : 'Kidney Tales'; ?>">
   <meta property="og:description" content="<?= isset($t['app_description']) ? htmlspecialchars($t['app_description']) : 'A multilingual web application for kidney health stories and resources.'; ?>">
   <meta property="og:type" content="website">
   <meta property="og:url" content="<?= htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) ?>">
   <meta property="og:image" content="/images/og-image.png">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?= isset($t['app_name']) ? htmlspecialchars($t['app_name']) : 'Kidney Tales'; ?>">
   <meta name="twitter:description" content="<?= isset($t['app_description']) ? htmlspecialchars($t['app_description']) : 'A multilingual web application for kidney health stories and resources.'; ?>">
   <meta name="twitter:image" content="/images/og-image.png">
-  
+
   <!-- Optimized Google Fonts: Roboto, Fira Mono, Segoe UI (fallback) -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
   <!-- Note: Segoe UI is a system font and does not need to be loaded from Google Fonts -->
-  
+
   <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/resets/meyer-reset.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/resets/normalize.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/resets/modern-reset.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/resets/remedy.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/colors.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/font-families.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/basic.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/language.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/header.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/main.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/navigation.css?v=<?= time() ?>">
   <!-- Additional styles can be added here -->
   <style>
     /* Custom styles can be added here */
   </style>
 
 </head>
-

@@ -1,0 +1,47 @@
+:root {
+  /* Backgrounds & Panels */
+  --background-color: lavender;
+  --body-bg: snow;
+  --panel-bg: azure;
+  --language-bg: aliceblue;
+  --light-color: gainsboro;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  /* Borders */
+  --border-color: darkslategray;
+  --panel-border: lightslategray;
+
+  /* Text */
+  --title-color: lightseagreen;
+  --text-color: darkslategray;
+  --language-color: purple;
+
+  /* Accents */
+  --accent-color: #ff6f61;
+  --accent-light: #ff8f7b;
+  --accent-lighter: #ffb3a1;
+  --accent-lightest: #ffd3d1;
+  --accent-darkest: #c94c4c;
+
+  /* Primary & Secondary */
+  --primary-color: deepskyblue;
+  --primary-dark: #007acc;
+  --secondary-color: #b9fbc0;
+  --secondary-dark: #8ef6a6;
+
+  /* Status Colors */
+  --danger-color: #ff6b6b;
+  --warning-color: #ffe66d;
+  --success-color: #b9fbc0;
+  --info-color: #85e3ff;
+  --welcome-color: yellow;
+
+  /* Grays */
+  --gray-light: #f0f0f0;
+  --gray-lighter: #e0e0e0;
+  --gray-lightest: #f5f5f5;
+  --gray-dark: #808080;
+  --gray-darker: #505050;
+  --gray-darkest: #303030;
+}

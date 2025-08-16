@@ -1,0 +1,93 @@
+.main-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'left main right'
+    'footer footer footer';
+  grid-template-columns: 1fr 10fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  margin: auto;
+  padding: 1rem;
+  border: thin solid transparent;
+  background-color: var(--body-bg);
+  border-radius: 1rem;
+  width: 96%;
+  color: var(--text-color);
+}
+
+.main-container .header {
+  grid-area: header;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 5rem;
+  box-shadow: 0 2px 8px var(--accent-color);
+  margin: 0 0 1rem 0;
+  color: var(--text-color);
+  transition: background-color 1s ease, box-shadow 1s ease;
+
+  &:hover {
+    background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  box-shadow: 0 4px 16px var(--accent-darkest);
+  }
+}
+
+.main-container .header h1 {
+  font-family: var(--fantasy-font);
+  font-size: 3rem;
+  color: var(--welcome-color);
+  text-shadow: 1px 1px 0px var(--border-color), 5px 5px 10px var(--accent-color);
+}
+
+.main-container .header p {
+  font-family: var(--cursive-font);
+  font-size: 1.3rem;
+  color: var(--text-color);
+  text-shadow: 1px 2px 4px var(--gray-dark), 0 0 10px var(--accent-color);
+}
+
+.main-container .left {
+  grid-area: left;
+  text-align: left;
+  padding: 1rem 0 0 0;
+}
+
+.main-container .main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+.main-container .right {
+  grid-area: right;
+  padding: 1rem;
+  text-align: right;
+}
+
+.main-container .footer {
+  grid-area: footer;
+}
+
+main section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: var(--background-color);
+  border: thin solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main section article {
+  display: inline-block;
+  max-width: 45%;
+  margin: 2rem auto 2rem auto;
+  padding: 1rem;
+  background-color: var(--panel-bg);
+  border: thin solid var(--border-color);
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px var(--dark-color);
+}

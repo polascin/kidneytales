@@ -1,0 +1,22 @@
+nav button {
+  padding: 0.5rem 1rem;
+  margin: auto auto 1rem auto;
+  background-color: var(--warning-color);
+  border: thin solid transparent;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--system-font);
+  font-weight: bold;
+}
+
+nav button:hover {
+  background-color: var(--accent-color);
+}
