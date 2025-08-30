@@ -31,8 +31,8 @@ try {
 } catch (Throwable $e) {
   error_log('[index.php] Language loading error: ' . $e->getMessage());
   // Fallback to English and empty translations on error
-  $currentLanguageCode = 'en';
-  $t = [];
+  LanguageModel::$currentLanguageCode = 'en';
+  LanguageModel::$t = [];
 }
 
 // --- End Language Loading ---
