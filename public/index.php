@@ -26,15 +26,25 @@ SessionManager::StartSession();
 
 // --- Language Loading and Error Handling ---
 try {
-  $currentLanguage = LanguageController::detectCurrentLanguage();
-  LanguageController::setCurrentLanguage($currentLanguage);
+    $currentLanguage = LanguageController::detectCurrentLanguage();
+    LanguageController::setCurrentLanguage($currentLanguage);
 } catch (Throwable $e) {
-  error_log('[index.php] Language loading error: ' . $e->getMessage());
-  // Fallback to English and empty translations on error
-  $currentLanguageCode = 'en';
-  $t = [];
+    error_log('[index.php] Language loading error: ' . $e->getMessage());
+    // Robust fallback: attempt full default setup
+    try {
+        LanguageController::setCurrentLanguage(defined('DEFAULT_LANGUAGE') ? DEFAULT_LANGUAGE : 'en');
+    } catch (Throwable $inner) {
+        error_log('[index.php] Fallback language loading error: ' . $inner->getMessage());
+        // Minimal hard fallback
+        LanguageModel::$currentLanguageCode = defined('DEFAULT_LANGUAGE') ? DEFAULT_LANGUAGE : 'en';
+        try {
+            LanguageModel::loadLanguageTranslations(LanguageModel::$currentLanguageCode);
+        } catch (Throwable $tEx) {
+            error_log('[index.php] Final fallback translations loading error: ' . $tEx->getMessage());
+            LanguageModel::$t = [];
+        }
+    }
 }
-
 // --- End Language Loading ---
 
 
