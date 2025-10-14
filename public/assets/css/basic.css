@@ -14,7 +14,8 @@ html {
 body {
   font-family: var(--main-font);
   max-width: 96%;
-  margin: 0 auto 0 auto; padding: 0;
+  margin: 0 auto 0 auto;
+  padding: 0;
   color: var(--text-color);
   background-color: var(--body-bg);
   border: thin solid var(--border-color);
@@ -56,4 +57,24 @@ a {
 a:hover,
 a:focus {
   color: var(--primary-dark);
+}
+
+footer {
+  display: block;
+  max-width: 66%;
+  margin: 3em auto 3em auto;
+  text-align: center;
+  padding: 0;
+  color: var(--text-color);
+  border-top: thin solid var(--border-color);
+}
+footer a {
+  color: var(--primary-color);
+}
+footer a:hover,
+footer a:focus {
+  color: var(--primary-dark);
+}
+footer p {
+  margin: 0.5em 0;
 }
