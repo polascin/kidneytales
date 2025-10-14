@@ -241,7 +241,7 @@ class UserController
                     // Update language session if changed
                     if ($updateData['preferred_language'] !== $user->preferred_language) {
                         $_SESSION['language'] = $updateData['preferred_language'];
-                        LanguageModel::setCurrentLanguage($updateData['preferred_language']);
+                        LanguageController::setCurrentLanguage($updateData['preferred_language']);
                     }
                 } else {
                     self::setFlashMessage('error', 'Profile update failed. Please try again.');

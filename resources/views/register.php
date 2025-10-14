@@ -4,8 +4,43 @@
 
 declare(strict_types=1);
 
+// Include bootstrap to load language and session
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'bootstrap.php';
+
+use KidneyTales\Controllers\SessionManager;
+use KidneyTales\Models\LanguageModel;
+
+// Start session if not already started
+SessionManager::StartSession();
+
+// Load current language
+$currentLanguageCode = LanguageModel::getCurrentLanguageCode();
+$t = LanguageModel::$t;
+
+// Load available languages for dropdown
+$languages = require APP_ROOT . DS . 'resources' . DS . 'languages.php';
+
+// Define password requirements
+if (!defined('PASSWORD_MIN_LENGTH')) {
+    define('PASSWORD_MIN_LENGTH', 8);
+}
+
+// Get CSRF token from session
+$csrf_token = $_SESSION['csrf_token'] ?? '';
+
+// Check if user is already logged in
+if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+    header('Location: /dashboard');
+    exit;
+}
+
+// Initialize flash messages array
+$flash_messages = $_SESSION['flash_messages'] ?? [];
+unset($_SESSION['flash_messages']);
+
 $pageTitle = $t['register'] ?? 'Register';
 $pageDescription = $t['register_description'] ?? 'Create your Kidney Tales account';
+$current_language = $currentLanguageCode;
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +56,12 @@ $pageDescription = $t['register_description'] ?? 'Create your Kidney Tales accou
     <link rel="stylesheet" href="/assets/css/colors.css">
     <link rel="stylesheet" href="/assets/css/font-families.css">
     <link rel="stylesheet" href="/assets/css/language.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
     
     <style>
         .register-container {
             max-width: 500px;
-            margin: 2rem auto;
+            margin: 1rem auto 2rem auto;
             padding: 2rem;
             background: #fff;
             border-radius: 8px;
@@ -130,9 +166,10 @@ $pageDescription = $t['register_description'] ?? 'Create your Kidney Tales accou
         }
         
         .language-selector {
-            position: absolute;
+            position: fixed;
             top: 1rem;
             right: 1rem;
+            z-index: 1000;
         }
         
         .password-requirements {
@@ -149,6 +186,9 @@ $pageDescription = $t['register_description'] ?? 'Create your Kidney Tales accou
     </style>
 </head>
 <body>
+    <!-- Header Container -->
+    <?php include APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'components' . DS . 'header.php'; ?>
+
     <!-- Language Selector -->
     <div class="language-selector">
         <?php include APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'components' . DS . 'language-selector.php'; ?>

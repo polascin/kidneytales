@@ -47,6 +47,38 @@ try {
 }
 // --- End Language Loading ---
 
+// Simple routing system
+$requestUri = $_SERVER['REQUEST_URI'] ?? '/';
+$path = parse_url($requestUri, PHP_URL_PATH);
 
-// Render the main homepage view
-include_once APP_ROOT . DS . 'src' . DS . 'Views' . DS . 'HomePageView.php';
+// Remove leading slash and make case-insensitive
+$route = strtolower(trim($path, '/'));
+
+// Handle different routes
+switch ($route) {
+    case 'login':
+        include_once APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'login.php';
+        break;
+        
+    case 'register':
+    case 'signup':
+        include_once APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'register.php';
+        break;
+        
+    case 'dashboard':
+        // Check if user is logged in, otherwise redirect to login
+        if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+            header('Location: /login');
+            exit;
+        }
+        include_once APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'dashboard.php';
+        break;
+        
+    case '':
+    case 'home':
+    case 'index.php':
+    default:
+        // Render the main homepage view
+        include_once APP_ROOT . DS . 'src' . DS . 'Views' . DS . 'HomePageView.php';
+        break;
+}

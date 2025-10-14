@@ -55,6 +55,7 @@ This document describes the comprehensive user management system implemented for
 The system uses granular permissions organized into categories:
 
 #### Content Permissions
+
 - `read_content` - View published content
 - `create_content` - Create new articles
 - `edit_content` - Edit others' content
@@ -63,12 +64,14 @@ The system uses granular permissions organized into categories:
 - `view_draft_content` - View unpublished drafts
 
 #### Translation Permissions
+
 - `translate_content` - Create translations
 - `review_translations` - Review translations
 - `approve_translations` - Approve translations
 - `manage_translation_projects` - Manage translation projects
 
 #### User Management Permissions
+
 - `view_user_profiles` - View user profiles
 - `edit_user_profiles` - Edit user profiles
 - `manage_users` - Full user management
@@ -76,6 +79,7 @@ The system uses granular permissions organized into categories:
 - `view_user_activity` - View activity logs
 
 #### Administrative Permissions
+
 - `admin_dashboard` - Access admin dashboard
 - `system_settings` - Modify system settings
 - `view_analytics` - View analytics and reports
@@ -83,6 +87,7 @@ The system uses granular permissions organized into categories:
 - `view_system_logs` - View system logs
 
 #### Subscription Permissions
+
 - `manage_subscriptions` - Manage user subscriptions
 - `view_subscription_reports` - View subscription analytics
 - `create_subscription_plans` - Create/modify plans
@@ -135,23 +140,27 @@ The system uses granular permissions organized into categories:
 ## Security Features
 
 ### Authentication
+
 - **Secure Password Hashing**: Uses PHP's `password_hash()` with bcrypt
 - **Session Management**: Secure session handling with CSRF protection
 - **Login Attempt Limiting**: Configurable lockout after failed attempts
 - **Session Binding**: Sessions bound to user agent and IP address
 
 ### CSRF Protection
+
 - Unique tokens for each session
 - 1-hour token expiry
 - Token validation on all POST requests
 - Token regeneration on login
 
 ### Rate Limiting
+
 - Configurable rate limits for various actions
 - IP-based tracking
 - Automatic reset after time windows
 
 ### Password Security
+
 - Configurable minimum length (default: 8 characters)
 - Password strength validation
 - Secure password reset functionality
@@ -161,28 +170,34 @@ The system uses granular permissions organized into categories:
 ### Core Tables
 
 #### `users`
+
 - User account information
 - Authentication data
 - Profile details
 - Security settings
 
 #### `roles`
+
 - User role definitions
 - Role hierarchy information
 
 #### `permissions`
+
 - Granular permission definitions
 - Categorized permissions
 
 #### `role_permissions`
+
 - Many-to-many relationship
 - Links roles to permissions
 
 #### `subscription_plans`
+
 - Available subscription plans
 - Pricing and feature information
 
 #### `user_subscriptions`
+
 - User subscription records
 - Usage tracking
 - Billing information
@@ -190,10 +205,12 @@ The system uses granular permissions organized into categories:
 ### Optional Tables
 
 #### `user_sessions`
+
 - Advanced session management
 - Session tracking and cleanup
 
 #### `security_logs`
+
 - Security event logging
 - Audit trail maintenance
 
@@ -261,6 +278,7 @@ define('DB_PASS', 'your_password');
 ### 3. Default Admin Account
 
 The system creates a default admin account:
+
 - **Username**: `admin`
 - **Email**: `admin@kidneytales.com`
 - **Password**: `KidneyTales2025!`
@@ -270,6 +288,7 @@ The system creates a default admin account:
 ### 4. File Permissions
 
 Ensure proper file permissions for:
+
 - Session storage directory
 - Log files
 - Upload directories (if applicable)

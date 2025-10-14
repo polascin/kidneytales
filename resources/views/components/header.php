@@ -41,13 +41,10 @@
       <div>
         <img src="<?= $flag ?>" alt="<?= $flagAlt ?>" title="<?= $flagTitle ?>" class="flag">
       </div>
-      <div class="userinfo">
-        <div><span class="description"><?= (isset($t['user_information']) ? $t['user_information'] : 'User information') ?> </span></div>
-        <div><span class="description"><?= (isset($t['user']) ? $t['user'] : 'User') . ': ' ?> </span>Placeholder</div>
-        <div><span class="description"><?= (isset($t['name']) ? $t['name'] : 'Name') . ': ' ?></span>Placeholder</div>
-        <div><span class="description"><?= (isset($t['user_email']) ? $t['user_email'] : 'User`s e-mail') . ': ' ?> </span>Placeholder</div>
-        <div><span class="description"><?= (isset($t['role']) ? $t['role'] : 'role') . ': ' ?></span>Placeholder</div>
-      </div>
+      <?php
+      // Include dynamic user information component
+      require_once APP_ROOT . DS . 'resources' . DS . 'views' . DS . 'components' . DS . 'user-info.php';
+      ?>
     </div>
 
   </div>

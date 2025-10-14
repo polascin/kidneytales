@@ -81,6 +81,7 @@
   <link rel="stylesheet" href="assets/css/header.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/main.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/navigation.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/auth.css?v=<?= time() ?>">
   <!-- Additional styles can be added here -->
   <style>
     /* Custom styles can be added here */

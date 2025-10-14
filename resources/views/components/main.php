@@ -13,6 +13,8 @@
           <li><button><a href="/stories"><?= isset($t['stories']) ? $t['stories'] : 'Stories'; ?></a></button></li>
           <li><button><a href="/about"><?= isset($t['about']) ? $t['about'] : 'About'; ?></a></button></li>
           <li><button><a href="/contact"><?= isset($t['contact']) ? $t['contact'] : 'Contact'; ?></a></button></li>
+          <li><button class="login-btn"><a href="/login"><?= isset($t['login']) ? $t['login'] : 'Login'; ?></a></button></li>
+          <li><button class="register-btn"><a href="/register"><?= isset($t['register']) ? $t['register'] : 'Sign Up'; ?></a></button></li>
         </ul>
       </nav>
     </menu>

@@ -1,0 +1,153 @@
+/* Authentication Navigation Styles for Kidney Tales */
+
+/* Login and Registration Navigation Buttons */
+.main-container .left menu nav ul li .login-btn {
+    background: linear-gradient(135deg, #007cba, #0066a3);
+    border: 2px solid #007cba;
+    transition: all 0.3s ease;
+}
+
+.main-container .left menu nav ul li .login-btn:hover {
+    background: linear-gradient(135deg, #005a87, #004a73);
+    border-color: #005a87;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 124, 186, 0.3);
+}
+
+.main-container .left menu nav ul li .login-btn a {
+    color: white !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.main-container .left menu nav ul li .register-btn {
+    background: linear-gradient(135deg, #28a745, #22963c);
+    border: 2px solid #28a745;
+    transition: all 0.3s ease;
+}
+
+.main-container .left menu nav ul li .register-btn:hover {
+    background: linear-gradient(135deg, #22963c, #1e7e34);
+    border-color: #22963c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.main-container .left menu nav ul li .register-btn a {
+    color: white !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Authentication section separator */
+.main-container .left menu nav ul li:nth-last-child(2):before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    margin: 0.5rem 0;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .main-container .left menu nav ul li .login-btn,
+    .main-container .left menu nav ul li .register-btn {
+        margin: 0.25rem 0;
+        padding: 0.6rem 1rem;
+    }
+    
+    .main-container .left menu nav ul li .login-btn a,
+    .main-container .left menu nav ul li .register-btn a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Authentication forms styling enhancements */
+.login-container,
+.register-container {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+}
+
+.login-container .btn,
+.register-container .btn {
+    background: linear-gradient(135deg, #007cba, #005a87);
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.login-container .btn:hover,
+.register-container .btn:hover {
+    background: linear-gradient(135deg, #005a87, #004a73);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 124, 186, 0.3);
+}
+
+/* Form focus states */
+.login-container .form-group input:focus,
+.register-container .form-group input:focus,
+.register-container .form-group select:focus {
+    border-color: #007cba;
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Flash message improvements */
+.flash-message {
+    border-left: 4px solid;
+    animation: slideInFromTop 0.3s ease-out;
+}
+
+.flash-message.success {
+    border-left-color: #28a745;
+}
+
+.flash-message.error {
+    border-left-color: #dc3545;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Language selector improvements */
+.language-selector {
+    z-index: 1000;
+}
+
+/* Loading states for forms */
+.btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
