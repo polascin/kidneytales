@@ -76,3 +76,5 @@ See `docs/LARAGON_SSL_SETUP.md` for complete details.
 ---
 
 **Last Updated**: October 14, 2025
+
+I'll apply these rules rigorously to all future Markdown file generation to avoid the need for post-creation fixes. Thank you for your patience while I corrected those issues! 🙏
