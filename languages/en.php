@@ -370,6 +370,20 @@ return [
     'passwords_dont_match' => 'Passwords do not match',
     'terms_required' => 'You must agree to the Terms of Service',
 
+    // Additional authentication translations
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'preferred_language' => 'Preferred Language',
+    'create_account' => 'Create Account',
+    'already_have_account' => 'Already have an account?',
+    'dont_have_account' => 'Don\'t have an account?',
+    'forgot_password' => 'Forgot Password?',
+    'username_help' => 'Letters, numbers, and underscores only. Minimum 3 characters.',
+    'password_requirements' => 'Minimum 8 characters',
+    'passwords_must_match' => 'Passwords must match',
+    'login_description' => 'Login to your Kidney Tales account',
+    'register_description' => 'Create your Kidney Tales account',
+
     // Medical terminology - kidney/Kidney specific
     'kidney' => 'Kidney',
     'kidneys' => 'Kidneys',

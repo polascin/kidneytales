@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'アカウントの確認が完了しました',
     'auth_verification_failed' => 'アカウント確認に失敗しました',
 
+    // Authentication form specific translations
+    'first_name' => '名',
+    'last_name' => '姓',
+    'username' => 'ユーザー名',
+    'email' => 'メールアドレス',
+    'password' => 'パスワード',
+    'confirm_password' => 'パスワード確認',
+    'login' => 'ログイン',
+    'register' => '新規登録',
+    'sign_in' => 'サインイン',
+    'sign_up' => 'サインアップ',
+    'create_account' => 'アカウント作成',
+    'already_have_account' => 'すでにアカウントをお持ちですか？',
+    'no_account_yet' => 'まだアカウントをお持ちではありませんか？',
+    'remember_me' => 'ログイン状態を保持',
+    'forgot_password' => 'パスワードを忘れた方',
+    'back_to_home' => 'ホームに戻る',
+    'login_failed' => 'ログインに失敗しました。情報を確認してください。',
+    'registration_failed' => '登録に失敗しました。もう一度お試しください。',
+    'email_invalid' => '有効なメールアドレスを入力してください',
+    'password_requirements' => 'パスワードは8文字以上で入力してください',
+    'password_mismatch' => 'パスワードが一致しません',
+    'username_taken' => 'このユーザー名はすでに使用されています',
+    'email_taken' => 'このメールアドレスはすでに登録されています',
+    'registration_success' => 'アカウントの作成が完了しました！ログインできます。',
+    'login_success' => 'おかえりなさい！',
+    'logout_success' => 'ログアウトしました',
+    'session_expired' => 'セッションが期限切れです。再度ログインしてください。',
+    'access_denied' => 'アクセスが拒否されました',
+    'invalid_csrf_token' => '無効なセキュリティトークンです。もう一度お試しください。',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

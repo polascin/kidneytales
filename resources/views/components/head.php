@@ -82,9 +82,15 @@
   <link rel="stylesheet" href="assets/css/main.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/navigation.css?v=<?= time() ?>">
   <link rel="stylesheet" href="assets/css/auth.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/login.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="assets/css/register.css?v=<?= time() ?>">
   <!-- Additional styles can be added here -->
   <style>
     /* Custom styles can be added here */
   </style>
 
 </head>
+
+<body>
+  <!-- Body content starts here -->
+  

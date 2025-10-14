@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Conta verificada com sucesso',
     'auth_verification_failed' => 'Falha na verificação da conta',
 
+    // Authentication form specific translations
+    'first_name' => 'Primeiro nome',
+    'last_name' => 'Último nome',
+    'username' => 'Nome de utilizador',
+    'email' => 'E-mail',
+    'password' => 'Palavra-passe',
+    'confirm_password' => 'Confirmar palavra-passe',
+    'login' => 'Iniciar sessão',
+    'register' => 'Registar',
+    'sign_in' => 'Entrar',
+    'sign_up' => 'Inscrever-se',
+    'create_account' => 'Criar conta',
+    'already_have_account' => 'Já tem uma conta?',
+    'no_account_yet' => 'Ainda não tem conta?',
+    'remember_me' => 'Lembrar-me',
+    'forgot_password' => 'Esqueceu a palavra-passe?',
+    'back_to_home' => 'Voltar ao início',
+    'login_failed' => 'Falha no início de sessão. Verifique os seus dados.',
+    'registration_failed' => 'Falha no registo. Tente novamente.',
+    'email_invalid' => 'Introduza um endereço de e-mail válido',
+    'password_requirements' => 'A palavra-passe deve ter pelo menos 8 caracteres',
+    'password_mismatch' => 'As palavras-passe não coincidem',
+    'username_taken' => 'Este nome de utilizador já está em uso',
+    'email_taken' => 'Este e-mail já está registado',
+    'registration_success' => 'Conta criada com sucesso! Pode agora iniciar sessão.',
+    'login_success' => 'Bem-vindo de volta!',
+    'logout_success' => 'Sessão terminada com sucesso',
+    'session_expired' => 'A sua sessão expirou. Inicie sessão novamente.',
+    'access_denied' => 'Acesso negado',
+    'invalid_csrf_token' => 'Token de segurança inválido. Tente novamente.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Tili vahvistettu onnistuneesti',
     'auth_verification_failed' => 'Tilin vahvistus epäonnistui',
 
+    // Authentication form specific translations
+    'first_name' => 'Etunimi',
+    'last_name' => 'Sukunimi',
+    'username' => 'Käyttäjänimi',
+    'email' => 'Sähköposti',
+    'password' => 'Salasana',
+    'confirm_password' => 'Vahvista salasana',
+    'login' => 'Kirjaudu sisään',
+    'register' => 'Rekisteröidy',
+    'sign_in' => 'Kirjaudu',
+    'sign_up' => 'Rekisteröidy',
+    'create_account' => 'Luo tili',
+    'already_have_account' => 'Onko sinulla jo tili?',
+    'no_account_yet' => 'Eikö sinulla ole vielä tiliä?',
+    'remember_me' => 'Muista minut',
+    'forgot_password' => 'Unohditko salasanan?',
+    'back_to_home' => 'Takaisin etusivulle',
+    'login_failed' => 'Kirjautuminen epäonnistui. Tarkista tietosi.',
+    'registration_failed' => 'Rekisteröinti epäonnistui. Yritä uudelleen.',
+    'email_invalid' => 'Anna kelvollinen sähköpostiosoite',
+    'password_requirements' => 'Salasanan on oltava vähintään 8 merkkiä',
+    'password_mismatch' => 'Salasanat eivät täsmää',
+    'username_taken' => 'Tämä käyttäjänimi on jo käytössä',
+    'email_taken' => 'Tämä sähköposti on jo rekisteröity',
+    'registration_success' => 'Tili luotu onnistuneesti! Voit nyt kirjautua sisään.',
+    'login_success' => 'Tervetuloa takaisin!',
+    'logout_success' => 'Uloskirjautuminen onnistui',
+    'session_expired' => 'Istuntosi on vanhentunut. Kirjaudu uudelleen.',
+    'access_denied' => 'Pääsy evätty',
+    'invalid_csrf_token' => 'Virheellinen turvallisuusavain. Yritä uudelleen.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

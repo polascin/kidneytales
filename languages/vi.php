@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Xác minh tài khoản thành công',
     'auth_verification_failed' => 'Xác minh tài khoản thất bại',
 
+    // Authentication form specific translations
+    'first_name' => 'Tên',
+    'last_name' => 'Họ',
+    'username' => 'Tên người dùng',
+    'email' => 'Email',
+    'password' => 'Mật khẩu',
+    'confirm_password' => 'Xác nhận mật khẩu',
+    'login' => 'Đăng nhập',
+    'register' => 'Đăng ký',
+    'sign_in' => 'Đăng nhập',
+    'sign_up' => 'Đăng ký',
+    'create_account' => 'Tạo tài khoản',
+    'already_have_account' => 'Đã có tài khoản?',
+    'no_account_yet' => 'Chưa có tài khoản?',
+    'remember_me' => 'Ghi nhớ đăng nhập',
+    'forgot_password' => 'Quên mật khẩu?',
+    'back_to_home' => 'Quay về trang chủ',
+    'login_failed' => 'Đăng nhập thất bại. Vui lòng kiểm tra thông tin của bạn.',
+    'registration_failed' => 'Đăng ký thất bại. Vui lòng thử lại.',
+    'email_invalid' => 'Vui lòng nhập địa chỉ email hợp lệ',
+    'password_requirements' => 'Mật khẩu phải có ít nhất 8 ký tự',
+    'password_mismatch' => 'Mật khẩu không khớp',
+    'username_taken' => 'Tên người dùng này đã được sử dụng',
+    'email_taken' => 'Email này đã được đăng ký',
+    'registration_success' => 'Tài khoản đã được tạo thành công! Bạn có thể đăng nhập ngay bây giờ.',
+    'login_success' => 'Chào mừng bạn trở lại!',
+    'logout_success' => 'Đăng xuất thành công',
+    'session_expired' => 'Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.',
+    'access_denied' => 'Truy cập bị từ chối',
+    'invalid_csrf_token' => 'Mã bảo mật không hợp lệ. Vui lòng thử lại.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

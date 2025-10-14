@@ -63,9 +63,40 @@ return [
     'auth_verification_success' => 'Επιτυχής επιβεβαίωση λογαριασμού',
     'auth_verification_failed' => 'Η επιβεβαίωση λογαριασμού απέτυχε',
 
+    // Authentication form specific translations
+    'first_name' => 'Όνομα',
+    'last_name' => 'Επίθετο',
+    'username' => 'Όνομα χρήστη',
+    'email' => 'Email',
+    'password' => 'Κωδικός πρόσβασης',
+    'confirm_password' => 'Επιβεβαίωση κωδικού',
+    'login' => 'Σύνδεση',
+    'register' => 'Εγγραφή',
+    'sign_in' => 'Είσοδος',
+    'sign_up' => 'Εγγραφή',
+    'create_account' => 'Δημιουργία λογαριασμού',
+    'already_have_account' => 'Έχετε ήδη λογαριασμό;',
+    'no_account_yet' => 'Δεν έχετε ακόμη λογαριασμό;',
+    'remember_me' => 'Να με θυμάσαι',
+    'forgot_password' => 'Ξεχάσατε τον κωδικό;',
+    'back_to_home' => 'Επιστροφή στην αρχική',
+    'login_failed' => 'Η σύνδεση απέτυχε. Ελέγξτε τα στοιχεία σας.',
+    'registration_failed' => 'Η εγγραφή απέτυχε. Προσπαθήστε ξανά.',
+    'email_invalid' => 'Εισάγετε ένα έγκυρο email',
+    'password_requirements' => 'Ο κωδικός πρέπει να έχει τουλάχιστον 8 χαρακτήρες',
+    'password_mismatch' => 'Οι κωδικοί δεν ταιριάζουν',
+    'username_taken' => 'Αυτό το όνομα χρήστη είναι ήδη κατειλημμένο',
+    'email_taken' => 'Αυτό το email είναι ήδη εγγεγραμμένο',
+    'registration_success' => 'Ο λογαριασμός δημιουργήθηκε επιτυχώς! Μπορείτε να συνδεθείτε τώρα.',
+    'login_success' => 'Καλώς ήρθατε πίσω!',
+    'logout_success' => 'Αποσύνδεση επιτυχής',
+    'session_expired' => 'Η συνεδρία σας έληξε. Συνδεθείτε ξανά.',
+    'access_denied' => 'Άρνηση πρόσβασης',
+    'invalid_csrf_token' => 'Μη έγκυρο διακριτικό ασφαλείας. Προσπαθήστε ξανά.',
+
     // ===============================
     // 4. STORY MANAGEMENT
-    // ===============================
+    // =======================================================
     'story_title' => 'Τίτλος ιστορίας',
     'story_content' => 'Περιεχόμενο ιστορίας',
     'story_author' => 'Συγγραφέας',

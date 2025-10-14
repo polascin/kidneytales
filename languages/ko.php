@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => '계정 인증 성공',
     'auth_verification_failed' => '계정 인증 실패',
 
+    // Authentication form specific translations
+    'first_name' => '이름',
+    'last_name' => '성',
+    'username' => '사용자명',
+    'email' => '이메일',
+    'password' => '비밀번호',
+    'confirm_password' => '비밀번호 확인',
+    'login' => '로그인',
+    'register' => '회원가입',
+    'sign_in' => '로그인',
+    'sign_up' => '회원가입',
+    'create_account' => '계정 만들기',
+    'already_have_account' => '이미 계정이 있으신가요?',
+    'no_account_yet' => '아직 계정이 없으신가요?',
+    'remember_me' => '로그인 상태 유지',
+    'forgot_password' => '비밀번호를 잊으셨나요?',
+    'back_to_home' => '홈으로 돌아가기',
+    'login_failed' => '로그인에 실패했습니다. 정보를 확인해주세요.',
+    'registration_failed' => '회원가입에 실패했습니다. 다시 시도해주세요.',
+    'email_invalid' => '유효한 이메일 주소를 입력해주세요',
+    'password_requirements' => '비밀번호는 최소 8자 이상이어야 합니다',
+    'password_mismatch' => '비밀번호가 일치하지 않습니다',
+    'username_taken' => '이 사용자명은 이미 사용 중입니다',
+    'email_taken' => '이 이메일은 이미 등록되어 있습니다',
+    'registration_success' => '계정이 성공적으로 생성되었습니다! 이제 로그인할 수 있습니다.',
+    'login_success' => '다시 오신 것을 환영합니다!',
+    'logout_success' => '성공적으로 로그아웃되었습니다',
+    'session_expired' => '세션이 만료되었습니다. 다시 로그인해주세요.',
+    'access_denied' => '액세스가 거부되었습니다',
+    'invalid_csrf_token' => '유효하지 않은 보안 토큰입니다. 다시 시도해주세요.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

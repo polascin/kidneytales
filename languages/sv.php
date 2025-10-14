@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Konto verifierat framgångsrikt',
     'auth_verification_failed' => 'Kontoverifiering misslyckades',
 
+    // Authentication form specific translations
+    'first_name' => 'Förnamn',
+    'last_name' => 'Efternamn',
+    'username' => 'Användarnamn',
+    'email' => 'E-post',
+    'password' => 'Lösenord',
+    'confirm_password' => 'Bekräfta lösenord',
+    'login' => 'Logga in',
+    'register' => 'Registrera',
+    'sign_in' => 'Logga in',
+    'sign_up' => 'Registrera',
+    'create_account' => 'Skapa konto',
+    'already_have_account' => 'Har du redan ett konto?',
+    'no_account_yet' => 'Har du inget konto än?',
+    'remember_me' => 'Kom ihåg mig',
+    'forgot_password' => 'Glömt lösenord?',
+    'back_to_home' => 'Tillbaka till startsidan',
+    'login_failed' => 'Inloggning misslyckades. Kontrollera dina uppgifter.',
+    'registration_failed' => 'Registrering misslyckades. Försök igen.',
+    'email_invalid' => 'Ange en giltig e-postadress',
+    'password_requirements' => 'Lösenordet måste innehålla minst 8 tecken',
+    'password_mismatch' => 'Lösenorden matchar inte',
+    'username_taken' => 'Detta användarnamn är redan taget',
+    'email_taken' => 'Denna e-post är redan registrerad',
+    'registration_success' => 'Konto skapat framgångsrikt! Du kan nu logga in.',
+    'login_success' => 'Välkommen tillbaka!',
+    'logout_success' => 'Utloggning lyckades',
+    'session_expired' => 'Din session har gått ut. Logga in igen.',
+    'access_denied' => 'Åtkomst nekad',
+    'invalid_csrf_token' => 'Ogiltig säkerhetstoken. Försök igen.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

@@ -62,6 +62,37 @@ return [
     'auth_verification_success' => '账户验证成功',
     'auth_verification_failed' => '账户验证失败',
 
+    // Authentication form specific translations
+    'first_name' => '名字',
+    'last_name' => '姓氏',
+    'username' => '用户名',
+    'email' => '电子邮箱',
+    'password' => '密码',
+    'confirm_password' => '确认密码',
+    'login' => '登录',
+    'register' => '注册',
+    'sign_in' => '登录',
+    'sign_up' => '注册',
+    'create_account' => '创建账户',
+    'already_have_account' => '已经有账户？',
+    'no_account_yet' => '还没有账户？',
+    'remember_me' => '记住我',
+    'forgot_password' => '忘记密码？',
+    'back_to_home' => '返回首页',
+    'login_failed' => '登录失败。请检查您的信息。',
+    'registration_failed' => '注册失败。请再试一次。',
+    'email_invalid' => '请输入有效的电子邮箱地址',
+    'password_requirements' => '密码必须至少8个字符',
+    'password_mismatch' => '密码不匹配',
+    'username_taken' => '该用户名已被使用',
+    'email_taken' => '该电子邮箱已被注册',
+    'registration_success' => '账户创建成功！您现在可以登录了。',
+    'login_success' => '欢迎回来！',
+    'logout_success' => '成功退出登录',
+    'session_expired' => '您的会话已过期。请重新登录。',
+    'access_denied' => '访问被拒绝',
+    'invalid_csrf_token' => '无效的安全令牌。请再试一次。',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

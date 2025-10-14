@@ -283,6 +283,35 @@ return [
     'passwords_dont_match' => 'Passwörter stimmen nicht überein',
     'terms_required' => 'Sie müssen den Nutzungsbedingungen zustimmen',
 
+    // Additional authentication translations
+    'first_name' => 'Vorname',
+    'last_name' => 'Nachname',
+    'preferred_language' => 'Bevorzugte Sprache',
+    'create_account' => 'Konto erstellen',
+    'already_have_account' => 'Haben Sie bereits ein Konto?',
+    'dont_have_account' => 'Haben Sie noch kein Konto?',
+    'forgot_password' => 'Passwort vergessen?',
+    'username_or_email' => 'Benutzername oder E-Mail',
+    'username_help' => 'Nur Buchstaben, Zahlen und Unterstriche. Mindestens 3 Zeichen.',
+    'password_requirements' => 'Mindestens 8 Zeichen',
+    'passwords_must_match' => 'Passwörter müssen übereinstimmen',
+    'login_description' => 'Bei Ihrem Nierengeschichten-Konto anmelden',
+    'register_description' => 'Ihr Nierengeschichten-Konto erstellen',
+    'back_to_home' => 'Zurück zur Startseite',
+    'login' => 'Anmelden',
+    'register' => 'Registrieren',
+    'password' => 'Passwort',
+    'sign_in' => 'Anmelden',
+    'sign_up_here' => 'Hier registrieren',
+    'remember_me' => 'Angemeldet bleiben',
+    'no_account' => 'Haben Sie noch kein Konto?',
+    'please_fill_required_fields' => 'Bitte füllen Sie alle Pflichtfelder aus.',
+    'invalid_csrf_token' => 'Ungültiger Sicherheitstoken. Bitte versuchen Sie es erneut.',
+    'email_required' => 'E-Mail ist erforderlich.',
+    'email_invalid' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    'password_required' => 'Passwort ist erforderlich.',
+    'login_failed' => 'Ungültige E-Mail oder Passwort.',
+
     // --- END: Missing German translations ---
 ];
 ?>

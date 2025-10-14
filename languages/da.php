@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Konto verificeret med succes',
     'auth_verification_failed' => 'Kontoverificering mislykkedes',
 
+    // Authentication form specific translations
+    'first_name' => 'Fornavn',
+    'last_name' => 'Efternavn',
+    'username' => 'Brugernavn',
+    'email' => 'E-mail',
+    'password' => 'Adgangskode',
+    'confirm_password' => 'Bekræft adgangskode',
+    'login' => 'Log ind',
+    'register' => 'Tilmeld',
+    'sign_in' => 'Log ind',
+    'sign_up' => 'Tilmeld',
+    'create_account' => 'Opret konto',
+    'already_have_account' => 'Har du allerede en konto?',
+    'no_account_yet' => 'Har du ikke en konto endnu?',
+    'remember_me' => 'Husk mig',
+    'forgot_password' => 'Glemt adgangskode?',
+    'back_to_home' => 'Tilbage til forsiden',
+    'login_failed' => 'Login mislykkedes. Kontroller dine oplysninger.',
+    'registration_failed' => 'Tilmelding mislykkedes. Prøv igen.',
+    'email_invalid' => 'Indtast en gyldig e-mailadresse',
+    'password_requirements' => 'Adgangskoden skal indeholde mindst 8 tegn',
+    'password_mismatch' => 'Adgangskoderne matcher ikke',
+    'username_taken' => 'Dette brugernavn er allerede taget',
+    'email_taken' => 'Denne e-mail er allerede registreret',
+    'registration_success' => 'Konto oprettet med succes! Du kan nu logge ind.',
+    'login_success' => 'Velkommen tilbage!',
+    'logout_success' => 'Logout var succesfuld',
+    'session_expired' => 'Din session er udløbet. Log venligst ind igen.',
+    'access_denied' => 'Adgang nægtet',
+    'invalid_csrf_token' => 'Ugyldig sikkerhedstoken. Prøv igen.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

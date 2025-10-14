@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Account succesvol geverifieerd',
     'auth_verification_failed' => 'Account verificatie mislukt',
 
+    // Authentication form specific translations
+    'first_name' => 'Voornaam',
+    'last_name' => 'Achternaam',
+    'username' => 'Gebruikersnaam',
+    'email' => 'E-mailadres',
+    'password' => 'Wachtwoord',
+    'confirm_password' => 'Wachtwoord bevestigen',
+    'login' => 'Inloggen',
+    'register' => 'Registreren',
+    'sign_in' => 'Aanmelden',
+    'sign_up' => 'Inschrijven',
+    'create_account' => 'Account aanmaken',
+    'already_have_account' => 'Heeft u al een account?',
+    'no_account_yet' => 'Nog geen account?',
+    'remember_me' => 'Onthoud mij',
+    'forgot_password' => 'Wachtwoord vergeten?',
+    'back_to_home' => 'Terug naar home',
+    'login_failed' => 'Inloggen mislukt. Controleer uw gegevens.',
+    'registration_failed' => 'Registratie mislukt. Probeer het opnieuw.',
+    'email_invalid' => 'Voer een geldig e-mailadres in',
+    'password_requirements' => 'Wachtwoord moet minimaal 8 tekens bevatten',
+    'password_mismatch' => 'Wachtwoorden komen niet overeen',
+    'username_taken' => 'Deze gebruikersnaam is al in gebruik',
+    'email_taken' => 'Dit e-mailadres is al geregistreerd',
+    'registration_success' => 'Account succesvol aangemaakt! U kunt nu inloggen.',
+    'login_success' => 'Welkom terug!',
+    'logout_success' => 'U bent succesvol uitgelogd',
+    'session_expired' => 'Uw sessie is verlopen. Log opnieuw in.',
+    'access_denied' => 'Toegang geweigerd',
+    'invalid_csrf_token' => 'Ongeldig beveiligingstoken. Probeer het opnieuw.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Akun berhasil diverifikasi',
     'auth_verification_failed' => 'Verifikasi akun gagal',
 
+    // Authentication form specific translations
+    'first_name' => 'Nama depan',
+    'last_name' => 'Nama belakang',
+    'username' => 'Nama pengguna',
+    'email' => 'Email',
+    'password' => 'Kata sandi',
+    'confirm_password' => 'Konfirmasi kata sandi',
+    'login' => 'Masuk',
+    'register' => 'Daftar',
+    'sign_in' => 'Masuk',
+    'sign_up' => 'Daftar',
+    'create_account' => 'Buat akun',
+    'already_have_account' => 'Sudah punya akun?',
+    'no_account_yet' => 'Belum punya akun?',
+    'remember_me' => 'Ingat saya',
+    'forgot_password' => 'Lupa kata sandi?',
+    'back_to_home' => 'Kembali ke beranda',
+    'login_failed' => 'Login gagal. Silakan periksa informasi Anda.',
+    'registration_failed' => 'Pendaftaran gagal. Silakan coba lagi.',
+    'email_invalid' => 'Silakan masukkan alamat email yang valid',
+    'password_requirements' => 'Kata sandi harus minimal 8 karakter',
+    'password_mismatch' => 'Kata sandi tidak cocok',
+    'username_taken' => 'Nama pengguna ini sudah digunakan',
+    'email_taken' => 'Email ini sudah terdaftar',
+    'registration_success' => 'Akun berhasil dibuat! Anda sekarang dapat masuk.',
+    'login_success' => 'Selamat datang kembali!',
+    'logout_success' => 'Berhasil keluar',
+    'session_expired' => 'Sesi Anda telah kedaluwarsa. Silakan masuk kembali.',
+    'access_denied' => 'Akses ditolak',
+    'invalid_csrf_token' => 'Token keamanan tidak valid. Silakan coba lagi.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'खाता सफलतापूर्वक सत्यापित हो गया',
     'auth_verification_failed' => 'खाता सत्यापन असफल',
 
+    // Authentication form specific translations
+    'first_name' => 'पहला नाम',
+    'last_name' => 'अंतिम नाम',
+    'username' => 'उपयोगकर्ता नाम',
+    'email' => 'ईमेल',
+    'password' => 'पासवर्ड',
+    'confirm_password' => 'पासवर्ड की पुष्टि करें',
+    'login' => 'लॉग इन',
+    'register' => 'पंजीकरण करें',
+    'sign_in' => 'साइन इन',
+    'sign_up' => 'साइन अप',
+    'create_account' => 'खाता बनाएं',
+    'already_have_account' => 'क्या आपका पहले से खाता है?',
+    'no_account_yet' => 'अभी तक खाता नहीं है?',
+    'remember_me' => 'मुझे याद रखें',
+    'forgot_password' => 'पासवर्ड भूल गए?',
+    'back_to_home' => 'होम पर वापस जाएं',
+    'login_failed' => 'लॉग इन असफल। कृपया अपनी जानकारी जाँचें।',
+    'registration_failed' => 'पंजीकरण असफल। कृपया पुनः प्रयास करें।',
+    'email_invalid' => 'कृपया एक वैध ईमेल पता दर्ज करें',
+    'password_requirements' => 'पासवर्ड में कम से कम 8 अक्षर होने चाहिए',
+    'password_mismatch' => 'पासवर्ड मेल नहीं खाते',
+    'username_taken' => 'यह उपयोगकर्ता नाम पहले से उपयोग में है',
+    'email_taken' => 'यह ईमेल पहले से पंजीकृत है',
+    'registration_success' => 'खाता सफलतापूर्वक बनाया गया! आप अब लॉग इन कर सकते हैं।',
+    'login_success' => 'वापस आपका स्वागत है!',
+    'logout_success' => 'आप सफलतापूर्वक लॉग आउट हो गए हैं',
+    'session_expired' => 'आपका सत्र समाप्त हो गया है। कृपया पुनः लॉग इन करें।',
+    'access_denied' => 'पहुँच अस्वीकृत',
+    'invalid_csrf_token' => 'अमान्य सुरक्षा टोकन। कृपया पुनः प्रयास करें।',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

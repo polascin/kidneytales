@@ -399,6 +399,42 @@ return [
     'footer_copyright' => 'Ľubomír Polaščín',
 
     // ===============================
+    // ADDITIONAL AUTHENTICATION TRANSLATIONS
+    // ===============================
+    'login' => 'Ensaluti',
+    'register' => 'Registriĝi',
+    'first_name' => 'Persona nomo',
+    'last_name' => 'Familia nomo',
+    'username' => 'Uzantonomo',
+    'email' => 'Retpoŝto',
+    'password' => 'Pasvorto',
+    'confirm_password' => 'Konfirmi pasvorton',
+    'preferred_language' => 'Preferata lingvo',
+    'create_account' => 'Krei konton',
+    'already_have_account' => 'Ĉu vi jam havas konton?',
+    'dont_have_account' => 'Ĉu vi ne havas konton?',
+    'forgot_password' => 'Ĉu vi forgesis pasvorton?',
+    'username_or_email' => 'Uzantonomo aŭ retpoŝto',
+    'username_help' => 'Nur literoj, numeroj kaj substrekoj. Minimume 3 signoj.',
+    'password_requirements' => 'Minimume 8 signoj',
+    'passwords_must_match' => 'Pasvortoj devas kongrui',
+    'login_description' => 'Ensaluti al via Renaj-Rakontoj konto',
+    'register_description' => 'Krei vian Renaj-Rakontoj konton',
+    'back_to_home' => 'Reen al hejmo',
+    'login_welcome' => 'Bonvenon reen',
+    'login_subtitle' => 'Ensaluti por aliri vian konton',
+    'sign_in' => 'Ensaluti',
+    'sign_up_here' => 'Registriĝi ĉi tie',
+    'remember_me' => 'Memoru min',
+    'no_account' => 'Ĉu vi ne havas konton?',
+    'please_fill_required_fields' => 'Bonvolu plenigi ĉiujn devigajn kampojn.',
+    'invalid_csrf_token' => 'Nevalida sekureca ĵetono. Bonvolu reprovi.',
+    'email_required' => 'Retpoŝto estas deviga.',
+    'email_invalid' => 'Bonvolu enigi validan retpoŝtan adreson.',
+    'password_required' => 'Pasvorto estas deviga.',
+    'login_failed' => 'Nevalida retpoŝto aŭ pasvorto.',
+
+    // ===============================
     // 16. MISCELLANEOUS
     // ===============================
     'current_language_code' => 'eo',

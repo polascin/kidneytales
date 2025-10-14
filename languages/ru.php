@@ -63,6 +63,37 @@ return [
     'auth_verification_success' => 'Аккаунт успешно подтвержден',
     'auth_verification_failed' => 'Ошибка подтверждения аккаунта',
 
+    // Authentication form specific translations
+    'first_name' => 'Имя',
+    'last_name' => 'Фамилия',
+    'username' => 'Имя пользователя',
+    'email' => 'E-mail',
+    'password' => 'Пароль',
+    'confirm_password' => 'Подтвердить пароль',
+    'login' => 'Войти',
+    'register' => 'Регистрация',
+    'sign_in' => 'Вход',
+    'sign_up' => 'Регистрация',
+    'create_account' => 'Создать аккаунт',
+    'already_have_account' => 'Уже есть аккаунт?',
+    'no_account_yet' => 'Еще нет аккаунта?',
+    'remember_me' => 'Запомнить меня',
+    'forgot_password' => 'Забыли пароль?',
+    'back_to_home' => 'Вернуться на главную',
+    'login_failed' => 'Ошибка входа. Проверьте свои данные.',
+    'registration_failed' => 'Ошибка регистрации. Попробуйте еще раз.',
+    'email_invalid' => 'Введите действительный адрес электронной почты',
+    'password_requirements' => 'Пароль должен содержать не менее 8 символов',
+    'password_mismatch' => 'Пароли не совпадают',
+    'username_taken' => 'Это имя пользователя уже занято',
+    'email_taken' => 'Этот e-mail уже зарегистрирован',
+    'registration_success' => 'Аккаунт успешно создан! Теперь вы можете войти.',
+    'login_success' => 'Добро пожаловать!',
+    'logout_success' => 'Вы успешно вышли из системы',
+    'session_expired' => 'Ваша сессия истекла. Войдите снова.',
+    'access_denied' => 'Доступ запрещен',
+    'invalid_csrf_token' => 'Недействительный токен безопасности. Попробуйте еще раз.',
+
     // ===============================
     // 4. STORY MANAGEMENT
     // ===============================

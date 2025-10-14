@@ -28,6 +28,7 @@
   flex-flow: row wrap;
   justify-content: center;
   margin: 3rem;
+  padding: 0.5rem;
   background-color: var(--language-bg);
   border: thin solid var(--border-color);
 }
@@ -36,7 +37,7 @@ button.flags-selector {
   border: thin solid transparent;
   background-color: transparent;
   margin: 0.1rem;
-  padding: 0.2rem;
+  padding: 0;
   color: var(--gray-dark);
   font-size: 0.75rem;
   font-weight: normal;
