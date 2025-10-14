@@ -33,16 +33,21 @@ composer install
 #### 3. Set Up Database
 
 Option A: **Web Interface** (Recommended)
-```
+
+```text
 Navigate to: http://your-site.com/database/setup.php
 ```
 
 Option B: **Command Line**
+
 ```bash
-php database/setup.php
+php -f database/migrate.php
 ```
 
+Or manually execute the SQL file:
+
 Option C: **Manual Setup**
+
 ```bash
 mysql -u your_user -p kidneytales < database/schema.sql
 mysql -u your_user -p kidneytales < database/seed_data.sql
@@ -59,6 +64,7 @@ This will run comprehensive tests to verify your installation.
 Point your web server document root to the `public/` directory.
 
 **For PHP Development Server:**
+
 ```bash
 php -S localhost:8000 -t public/
 ```
@@ -66,6 +72,7 @@ php -S localhost:8000 -t public/
 ### Default Admin Account
 
 After setup, you can log in with:
+
 - **Username:** `admin`
 - **Email:** `admin@kidneytales.local`
 - **Password:** `admin123`
@@ -103,7 +110,7 @@ The system includes 5 user roles with hierarchical permissions:
 
 ### File Structure
 
-```
+```text
 src/
 ├── Controllers/
 │   ├── UserController.php        # User registration, authentication
@@ -188,6 +195,7 @@ After successful installation:
 ### Support
 
 For issues or questions:
+
 - Review the documentation in `/docs/USER_MANAGEMENT_SYSTEM.md`
 - Check the test results in `/database/test.php`
 - Verify system requirements and configuration

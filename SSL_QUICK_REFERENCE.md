@@ -3,8 +3,9 @@
 ## 🚀 Quick Start
 
 Access your application:
-- **https://kidneytales.local** ← Use this!
-- http://kidneytales.local (auto-redirects to HTTPS)
+
+- **<https://kidneytales.local>** ← Use this!
+- <http://kidneytales.local> (auto-redirects to HTTPS)
 
 ## 🔧 Server Management
 
@@ -29,14 +30,17 @@ Run from project root: `.\server-manager.ps1 status`
 ## 📍 Key Files
 
 ### Nginx
+
 - Config: `C:\laragon\etc\nginx\sites-enabled\kidneytales.local.conf`
 - Executable: `C:\laragon\bin\nginx\nginx-1.27.3\nginx.exe`
 
 ### Apache
+
 - Config: `C:\laragon\etc\apache2\sites-enabled\kidneytales.local.conf`
 - Executable: `C:\laragon\bin\apache\httpd-2.4.62-240904-win64-VS17\bin\httpd.exe`
 
 ### SSL Certificates
+
 - Location: `C:\laragon\etc\ssl\kidneytales.local\`
 - Cert: `kidneytales.local+1.pem`
 - Key: `kidneytales.local+1-key.pem`
