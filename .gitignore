@@ -1,55 +1,84 @@
-# General
+# Operating System
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-*.log
-*.tmp
+Icon?
+desktop.ini
+
+# IDE and Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.iws
+*.ipr
+*.iml
 *.swp
 *.swo
-*.bak
-*.old
-*.orig
+*~
 
-# Composer
+# PHP
 /vendor/
 composer.lock
+composer.phar
 
-# Node
-node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-
-# PHPStorm
-.idea/
-
-# VSCode
-.vscode/
-
-# OS generated
-ehthumbs.db
-Icon?
-
-# Environment
+# Environment and Configuration
 .env
 .env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config/local.php
 
-# Cache
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Logs
+*.log
+/logs/
+storage/logs/
+
+# Cache and Temporary
 .cache/
 *.cache
+/cache/
+/tmp/
+*.tmp
+*.temp
 
-# PHPUnit
+# Testing and Coverage
 .phpunit.result.cache
+/test-output/
+/coverage/
+*.lcov
+*.lcov.info
+phpunit.xml
+.phpunit.cache
 
-# Coverage
-coverage/
-
-# Build
+# Build and Distribution
 /build/
 /dist/
+/public/build/
 
-# User uploads
+# User Uploads and Storage
 /public/uploads/
-/storage/
+/storage/app/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/testing/
+/storage/framework/views/
+/sessions/
 
 # Database
 *.sqlite
@@ -58,20 +87,11 @@ coverage/
 *.sql
 *.sql.gz
 
-# Backup files
+# Backup and Archive
 *.bak
 *.backup
-
-# Misc
-*.seed
-*.pid
-*.seed.js
-*.seed.json
-
-# Ignore local config
-config/local.php
-
-# Ignore by extension
+*.old
+*.orig
 *.tgz
 *.gz
 *.zip
@@ -79,33 +99,8 @@ config/local.php
 *.rar
 *.7z
 *.bin
-*.exe
-*.dll
-*.so
-*.dylib
-*.out
-*.app
-*.iml
 
-# Ignore test output
-/test-output/
-
-# Ignore coverage reports
-/coverage/
-
-# Ignore temporary files
-/tmp/
-
-# Ignore session files
-/sessions/
-
-# Ignore logs
-/logs/
-
-# Ignore cache
-/cache/
-
-# Ignore compiled files
+# Compiled and Binary
 *.class
 *.pyc
 *.pyo
@@ -116,25 +111,12 @@ config/local.php
 *.exe
 *.out
 *.app
-*.iws
-*.ipr
-*.iml
+*.so
+*.dylib
 
-# Ignore other IDE files
-*.sublime-workspace
-*.sublime-project
-*.code-workspace
-
-# Ignore local environment files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Ignore coverage and test result files
-coverage/
-*.lcov
-*.lcov.info
-
-# Ignore custom
+# Miscellaneous
+*.seed
+*.pid
+*.seed.js
+*.seed.json
 custom/
