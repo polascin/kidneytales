@@ -78,3 +78,12 @@ footer a:focus {
 footer p {
   margin: 0.5em 0;
 }
+.copyright-container {
+  display: flex;
+  font-style: italic;
+  color: var(--gray-color);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
