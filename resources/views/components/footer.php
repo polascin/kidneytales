@@ -3,6 +3,9 @@
     Copyright &copy; <strong><?= date('Y'); ?></strong> <?= isset($t['copyright']) ? $t['copyright'] : 'Ľubomír Polaščín & Kidney Tales Team Contributors. All rights reserved!'; ?>
   </div>
   <div>
+    <a href="mailto:support@ladvina.eu">support@ladvina.eu</a>
+  </div>
+  <div>
     <?= isset($t['app_footer']) ? $t['app_footer'] : 'Kidney Tales at <a href="https://ladvina.eu">ladvina.eu</a> is a multilingual web application designed to help users manage their kidney health and connect with others in the community.'; ?>
   </div>
   <div>
