@@ -155,6 +155,7 @@ return [
     'profile' => 'Profil',
     'settings' => 'Ustawienia',
     'register' => 'Zarejestruj',
+    'website' => 'Strona internetowa',
 
     // Content sections
     'important_notes' => 'Ważne Uwagi',
@@ -171,7 +172,7 @@ return [
     'support_description' => 'Jeśli potrzebujesz natychmiastowej pomocy medycznej lub jesteś w kryzysie, skontaktuj się ze swoim dostawcą opieki zdrowotnej lub służbami ratunkowymi.',
 
     // Home page
-    'welcome_home' => 'Witamy w Historie Nerek',
+    'welcome_home' => 'Witamy w Kidney Tales',
     'home_intro' => 'Witamy w naszej wspierającej społeczności dla osób dotkniętych chorobami nerek. Tutaj możesz podzielić się swoją historią, przeczytać doświadczenia innych i znaleźć wsparcie od ludzi, którzy rozumieją Twoją drogę.',
     'home_intro2' => 'Ta aplikacja internetowa została zaprojektowana w celu ułatwienia dzielenia się osobistymi opowieściami i historiami wśród osób dotkniętych chorobami nerek, w tym tych poddawanych dialzie, tych w okresie przed- lub podializowym oraz osób żyjących bez ograniczeń dializy.',
     'share_story' => 'Podziel się Swoją Historią',
@@ -232,4 +233,82 @@ return [
     'year' => 'Rok',
     'week' => 'Tydzień',
     'today_is' => 'Dziś jest',
+
+    // ===============================
+    // ZGODNOŚĆ Z KLUCZAMI en.php (dopasowanie do kodu)
+    // ===============================
+    // Aplikacja/branding
+    'current_language_code' => 'pl',
+    'welcome_message' => 'Witamy w Kidney Tales',
+    'app_name' => 'Kidney Tales',
+    'app_logo' => 'Logo aplikacji',
+    'app_title' => 'Kidney Tales',
+    'app_subtitle' => 'Wielojęzyczna aplikacja internetowa',
+    'app_url' => 'https://ladvina.eu',
+    'app_email' => 'info@ladvina.eu',
+    // Meta/head
+    'meta_keywords' => 'nerki, zdrowie, historie, opowieści, zasoby, wielojęzyczne, kidney tales, choroby nerek, dializa, przeszczep nerki, nefrologia',
+    'meta_author' => 'Lubomir Polascin',
+    'meta_creator' => 'Lubomir Polascin',
+    'meta_publisher' => 'Lubomir Polascin @ Kidney Tales Contributors Teams Members',
+
+    // Locale dla widżetu czasu
+    'locale' => 'pl-PL',
+    'lang' => 'pl',
+    'country' => 'PL',
+
+    // Logowanie/rejestracja i formularze (używane w widokach)
+    'register_description' => 'Utwórz swoje konto Kidney Tales',
+    'create_account' => 'Utwórz konto',
+    'first_name' => 'Imię',
+    'last_name' => 'Nazwisko',
+    'username' => 'Nazwa użytkownika',
+    'email' => 'Email',
+    'preferred_language' => 'Preferowany język',
+    'password' => 'Hasło',
+    'password_requirements' => 'Minimum 8 znaków',
+    'confirm_password' => 'Potwierdź hasło',
+    'passwords_must_match' => 'Hasła muszą być zgodne',
+    'username_help' => 'Tylko litery, cyfry i podkreślenia. Minimum 3 znaki.',
+    'dont_have_account' => 'Nie masz konta?',
+    'already_have_account' => 'Masz już konto?',
+    'forgot_password' => 'Zapomniałeś hasła?',
+    'back_to_home' => 'Powrót do Strony Głównej',
+    'username_or_email' => 'Nazwa użytkownika lub email',
+
+    // Panel / Dashboard
+    'dashboard' => 'Panel',
+    'dashboard_description' => 'Twój panel Kidney Tales',
+    'welcome_dashboard' => 'Witamy w twoim panelu',
+    'profile_summary' => 'Podsumowanie profilu',
+    'subscription_status' => 'Status subskrypcji',
+    'plan' => 'Plan',
+    'billing_cycle' => 'Rozliczenia',
+    'articles_this_month' => 'Artykuły w tym miesiącu',
+    'translations_this_month' => 'Tłumaczenia w tym miesiącu',
+    'manage_subscription' => 'Zarządzaj subskrypcją',
+    'quick_actions' => 'Szybkie akcje',
+    'create_article' => 'Utwórz artykuł',
+    'manage_translations' => 'Zarządzaj tłumaczeniami',
+    'browse_articles' => 'Przeglądaj artykuły',
+    'admin_tools' => 'Narzędzia administratora',
+    'admin_dashboard' => 'Panel administratora',
+    'manage_users' => 'Zarządzaj użytkownikami',
+    'view_analytics' => 'Zobacz analitykę',
+    'recent_activity' => 'Ostatnia aktywność',
+    'account_created' => 'Konto utworzone',
+    'member_since' => 'Członek od',
+    'edit_profile' => 'Edytuj profil',
+    'last_login' => 'Ostatnie logowanie',
+    'never' => 'Nigdy',
+    'user_email' => 'E-mail użytkownika',
+    'status' => 'Status',
+    'login_for_features' => 'Zaloguj się, aby uzyskać dostęp do wszystkich funkcji',
+    'translations' => 'Tłumaczenia',
+    'logout' => 'Wyloguj',
+
+    // Stopka / prawo
+    'terms_of_service' => 'Regulamin',
+    'privacy_policy' => 'Polityka prywatności',
+    'app_footer' => 'Kidney Tales na <a href="https://ladvina.eu">ladvina.eu</a> to wielojęzyczna aplikacja internetowa, która pomaga użytkownikom zarządzać zdrowiem nerek i łączyć się ze społecznością.',
 ];

@@ -397,4 +397,82 @@ return [
     'day_saturday' => 'ቅዳሜ',
     'day_sunday' => 'እሁድ',
     'footer_copyright' => 'Ľubomír Polaščín',
+
+    // ===============================
+    // COMPATIBILITY KEYS (aligned with en.php)
+    // ===============================
+    // App/branding
+    'current_language_code' => 'am',
+    'welcome_message' => 'እንኳን ወደ Kidney Tales መጡ',
+    'app_name' => 'Kidney Tales',
+    'app_logo' => 'የመተግበሪያ ሎጎ',
+    'app_title' => 'የኩላሊት ታሪኮች',
+    'app_subtitle' => 'በብዙ ቋንቋ የሚሰራ ድር መተግበሪያ',
+    'app_url' => 'https://ladvina.eu',
+    'app_email' => 'info@ladvina.eu',
+    'website' => 'ድረ-ገጽ',
+    // Meta/head
+    'meta_keywords' => 'kidney, health, stories, tales, resources, multilingual, kidney tales, dialysis, kidney transplant, nephrology',
+    'meta_author' => 'Lubomir Polascin',
+    'meta_creator' => 'Lubomir Polascin',
+    'meta_publisher' => 'Lubomir Polascin @ Kidney Tales Contributors Teams Members',
+
+    // Locale for time widget
+    'locale' => 'am-ET',
+    'lang' => 'am',
+    'country' => 'ET',
+
+    // Auth and forms (used in views)
+    'register' => 'ተመዝገብ',
+    'register_description' => 'የእርስዎን የKidney Tales መለያ ፍጠር',
+    'create_account' => 'መለያ ፍጠር',
+    'first_name' => 'የመጀመሪያ ስም',
+    'last_name' => 'የመጨረሻ ስም',
+    'username' => 'የተጠቃሚ ስም',
+    'email' => 'ኢሜይል',
+    'preferred_language' => 'ተመራጭ ቋንቋ',
+    'password' => 'የይለፍ ቃል',
+    'password_requirements' => 'ቢያንስ 8 ቁምፊዎች',
+    'confirm_password' => 'የይለፍ ቃል አረጋግጥ',
+    'passwords_must_match' => 'የይለፍ ቃሎች መመሳሰል አለባቸው',
+    'username_help' => 'ፊደላት፣ ቁጥሮች እና የመደመር ምልክቶች ብቻ። ቢያንስ 3 ቁምፊዎች።',
+    'login' => 'ግባ',
+    'dont_have_account' => 'መለያ የለዎትም?',
+    'already_have_account' => 'መለያ አለዎት?',
+    'forgot_password' => 'የይለፍ ቃል ረሳሁ?',
+    'back_to_home' => 'ወደ መነሻ ተመለስ',
+    'username_or_email' => 'የተጠቃሚ ስም ወይም ኢሜይል',
+
+    // Dashboard and user info
+    'dashboard' => 'መቆጣጠሪያ ሰሌዳ',
+    'dashboard_description' => 'የእርስዎ የKidney Tales መቆጣጠሪያ ሰሌዳ',
+    'welcome_dashboard' => 'ወደ መቆጣጠሪያ ሰሌዳዎ እንኳን ደህና መጡ',
+    'profile_summary' => 'የመገለጫ ማጠቃለያ',
+    'subscription_status' => 'የምዝገባ ሁኔታ',
+    'plan' => 'ዕቅድ',
+    'billing_cycle' => 'መክፈያ',
+    'articles_this_month' => 'የዚህ ወር ጽሁፎች',
+    'translations_this_month' => 'ትርጉሞች በዚህ ወር',
+    'manage_subscription' => 'ምዝገባን አስተዳድር',
+    'quick_actions' => 'ፈጣን እርምጃዎች',
+    'manage_translations' => 'ትርጉሞችን አስተዳድር',
+    'browse_articles' => 'ጽሁፎችን ያስተዋውቁ',
+    'admin_tools' => 'የአስተዳዳሪ መሳሪያዎች',
+    'manage_users' => 'ተጠቃሚዎችን አስተዳድር',
+    'view_analytics' => 'ትንታኔን ይመልከቱ',
+    'recent_activity' => 'ቅርብ እንቅስቃሴ',
+    'account_created' => 'መለያ ተፈጥሯል',
+    'member_since' => 'ከዚህ ጊዜ ጀምሮ አባል',
+    'edit_profile' => 'መገለጫ አርም',
+    'last_login' => 'መጨረሻ ግባ',
+    'never' => 'በፍጹም',
+    'user' => 'ተጠቃሚ',
+    'user_email' => 'ኢሜይል',
+    'status' => 'ሁኔታ',
+    'login_for_features' => 'ሙሉ ባህሪያትን ለመድረስ ግባ',
+
+    // Footer/legal
+    'terms_of_service' => 'የአገልግሎት ውሎች',
+    'privacy_policy' => 'የግላዊነት መመሪያ',
+    'app_footer' => 'Kidney Tales በ <a href="https://ladvina.eu">ladvina.eu</a> በብዙ ቋንቋ የተዘጋጀ ድር መተግበሪያ ነው።',
 ];

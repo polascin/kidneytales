@@ -16,10 +16,10 @@ declare(strict_types=1);
 return [
     // Application general
     'current_language_code' => 'en',
-    'welcome_message' => 'Welcome to Kidney Stories',
-    'app_name' => 'Kidney Stories',
+    'welcome_message' => 'Welcome to Kidney Tales',
+    'app_name' => 'Kidney Tales',
     'app_logo' => 'Application Logo',
-    'app_title' => 'Kidney Stories',
+    'app_title' => 'Kidney Tales',
     'app_subtitle' => 'A Multilingual Web Application',
     'app_description' => 'A web application for sharing tales and stories from the community of people with kidney disorders, including those on dialysis, and those who have had or are waiting for a kidney transplant.',
     'app_version' => 'Version 2025.08.01.01',
@@ -29,6 +29,11 @@ return [
     'copyright_notice' => 'All rights reserved.',
     'app_url' => 'https://ladvina.eu',
     'app_email' => 'info@ladvina.eu',
+    // Metadata for head tags
+    'meta_keywords' => 'kidney, health, stories, tales, resources, multilingual, kidney tales, kidney disease, kidney health, kidney stories, renal tales, renal stories, dialysis, kidney transplant, renal transplant, nephrology',
+    'meta_author' => 'Lubomir Polascin',
+    'meta_creator' => 'Lubomir Polascin',
+    'meta_publisher' => 'Lubomir Polascin @ Kidney Tales Contributors Teams Members',
     'welcome' => 'Welcome!',
     'current_language' => 'Current language',
     'change' => 'Change',
@@ -128,6 +133,10 @@ return [
     'current_language_file' => 'Current language file',
     'current_language_flag' => 'Current language flag',
     'current_language_flag_alt' => 'Current language flag',
+    // Locale info for date/time widgets
+    'locale' => (defined('APP_LOCALE') ? APP_LOCALE : 'en-US'),
+    'lang' => (defined('APP_LANG') ? APP_LANG : 'en'),
+    'country' => (defined('APP_COUNTRY') ? APP_COUNTRY : 'US'),
 
     // Date and time
     'datetime_placeholder' => 'Date, time including detailed internet time @beat will be displayed here.',
@@ -171,6 +180,7 @@ return [
     'profile' => 'Profile',
     'settings' => 'Settings',
     'register' => 'Register',
+    'website' => 'Website',
     
     // User management system
     'welcome' => 'Welcome',
@@ -204,11 +214,13 @@ return [
     'username_help' => 'Letters, numbers, and underscores only. Minimum 3 characters.',
     'password_requirements' => 'Minimum 8 characters',
     'welcome_dashboard' => 'Welcome to Your Dashboard',
+    'dashboard_description' => 'Your Kidney Tales dashboard',
     'profile_summary' => 'Profile Summary',
     'subscription_status' => 'Subscription Status',
     'articles_this_month' => 'Articles This Month',
     'translations_this_month' => 'Translations This Month',
     'manage_subscription' => 'Manage Subscription',
+    'billing_cycle' => 'Billing',
     'quick_actions' => 'Quick Actions',
     'manage_translations' => 'Manage Translations',
     'browse_articles' => 'Browse Articles',
@@ -383,6 +395,11 @@ return [
     'passwords_must_match' => 'Passwords must match',
     'login_description' => 'Login to your Kidney Tales account',
     'register_description' => 'Create your Kidney Tales account',
+    
+    // Footer and legal
+    'terms_of_service' => 'Terms of Service',
+    'privacy_policy' => 'Privacy Policy',
+    'app_footer' => 'Kidney Tales at <a href="https://ladvina.eu">ladvina.eu</a> is a multilingual web application designed to help users manage their kidney health and connect with others in the community.',
 
     // Medical terminology - kidney/Kidney specific
     'kidney' => 'Kidney',
